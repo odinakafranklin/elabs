@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/all.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="topnav">
+   
+ <img class="logo" src="logo.png" alt="logo"/>     
+  <div class="sub-side-bar">
+     <a href="#" style="cursor:pointer" onclick="openNav()">
+       <i class="fa fa-fw fa-bars nav-icon"></i> <b class="user-name">Your Laboratory Name</b>
+     </a>
+  </div>
+ 
+  <div class="sub-top-nav">
+    <a href="#">
+      <i class="fa fa-fw fa-bell nav-icon"></i><sup class="notify">1</sup>
+    </a>
+    <a href="#">
+      <i class="fa fa-fw fa-user-circle nav-icon"></i> <b class="user-name">David Godbless</b>
+    </a>
+    <a href="#">
+       <span class="arrow" onclick="drop()"><i class="fa fa-fw fa-arrow-down"></i></span>
+    </a>
+  </div>
+    <div id="dropMenu" style="visibility: hidden;" class="menu-drop">
+     
+      <div class="menu-drop-item">
+        <span class="drop-icon"><i class="fa fa-fw fa-user "></i></span> 
+        <a href="#"><b>Profile</b></a><br/>
+        <small class="info">Update & Manage</small>
+      </div>
+
+      <div class="menu-drop-item">
+        <span class="drop-icon"><i class="fa fa-fw fa-cogs"></i></span> 
+        <a href="#"><b>Help & Support</b></a><br/>
+        <small class="info">Contact & FAC</small>
+      </div>
+
+      <div class="menu-drop-item"> 
+        <span class="drop-icon"><i class="fa fa-fw fa-microphone"></i></span> 
+        <a href="#"><b>Complain</b></a><br/>
+        <small class="info">Report an Issue</small>
+      </div>
+        
+      <div class="menu-drop-item">
+        <button class="logout-btn">
+          <i class="fa fa-fw fa-sign-out-alt"></i> <b>Logout</b>
+        </button>
+      </div>
+
+    </div>
+  
+</div>
+
+<div id="myNav" class="overlay">
+
+<div class="sidebar vertical-menu overlay-content">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
+    <i class="fa fa-fw fa-arrow-alt-circle-left sydIcon"></i> 
+    Close Menu <span class="arrow"><i class="fa fa-fw fa-times"></i></span>
+  </a>
+
+    <a href="#home"><i class="fa fa-fw fa-building sydIcon"></i> Front Office <span class="arrow"><i class="fa fa-fw fa-arrow-down"></i></span></a>
+    <a href="#services"><i class="fa fa-fw fa-syringe sydIcon"></i> Phlebotomy<span class="arrow"><i class="fa fa-fw fa-arrow-down"></i></span></a>
+    <a href="#clients"><i class="fa fa-fw fa-flask sydIcon"></i> Laboratory<span class="arrow"><i class="fa fa-fw fa-arrow-down"></i></span></a>
+    <a href="#contact"><i class="fa fa-fw fa-book-open sydIcon"></i> Admin<span class="arrow"><i class="fa fa-fw fa-arrow-down"></i></span></a>
+    <a href="#about"><i class="fa fa-fw fa-motorcycle sydIcon"></i> Dispatch<span class="arrow"><i class="fa fa-fw fa-arrow-down"></i></span></a>
+    <a href="#services"><i class="fa fa-fw fa-microscope sydIcon"></i> Analyzers<span class="arrow"><i class="fa fa-fw fa-arrow-down"></i></span></a>
+    <a href="#clients"><i class="fa fa-fw fa-check-double sydIcon"></i> Qc<span class="arrow"><i class="fa fa-fw fa-arrow-down"></i></span></a>
+    <a href="#clients"><i class="fa fa-fw fa-money-bill sydIcon"></i> Account<span class="arrow"><i class="fa fa-fw fa-arrow-down"></i></span></a>
+    <a class="dropdown-btn" href="#contact"><i id="sydIcon" class="fa fa-fw fa-archive "></i> <span id="navName"> Inventory</span><span class="arrow">
+      <i id="ardn" class="fa fa-fw fa-arrow-down"></i><i style="display: none;" id="arup" class="fa fa-fw fa-arrow-up"></i></span></a>
+    <div class="dropdown-container">
+      <a href="#">Option 1</a>
+      <a href="#">Option 2</a>
+      <a href="#">Option 3</a>
+    </div>
+      
+</div>
+</div> 
+
+  <div class="main">
+    <span><b>Blank Page</b></span>
+    <span class="arrow">
+        <span style="color:#ccc;">Home <i class="fa fa-fw fa-arrow-right"></i></span>
+        <span style="color:#ccc;">Page 1 <i class="fa fa-fw fa-arrow-right"></i></span> 
+         <b>Page 2</b>
+    </span>
+
+     
+</div>
+<div class="btmbar">
+       <small>
+        <div class="btm-info">
+            e-Lab LIS by Netwalkers NG (c) 2022. All rights reserved
+        </div>
+        <div class="btm-link">
+        <a href="#home" class="">About Us</a> |
+        <a href="#news">Contact Us</a> |
+        <a href="#contact">Terms of Service</a> |
+        <a href="#contact">Privacy Policy</a>
+        </div>
+       </small> 
+      </div> 
+   <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
