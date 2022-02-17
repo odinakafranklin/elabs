@@ -7,10 +7,10 @@
 <link href="css/all.css" rel="stylesheet">
 </head>
 <body>
-
+<!--topnav begins-->
 <div class="topnav">
-  <span class="web_nav">
-  
+  <!--topnav for web-->
+  <span class="web_nav"> 
   <div class="sub-side-bar">
     <img class="logo" src="logo.png" alt="logo"/>
      <a class="web_btn" href="#" style="cursor:pointer" onclick="toggleNav()">
@@ -21,7 +21,8 @@
     </a>
   </div>
 </span>
-  
+ 
+<!--topnav for mobile-->
   <span class="sub-side-bar mobile_nav">
      <a class="mobile_btn" href="#" style="cursor:pointer" onclick="openNav()">
       <i class="fa fa-fw fa-grip-vertical "></i>
@@ -42,6 +43,8 @@
        <span class="mobile_btn"  onclick="drop()"><i class="fa fa-fw fa-ellipsis-v"></i></span>
     </a>
   </div>
+
+  <!--topnav links-->
     <div id="dropMenu" style="visibility: hidden;" class="menu-drop">
      
       <div class="menu-drop-item">
@@ -71,16 +74,20 @@
     </div>
   
 </div>
+<!--topnav ends-->
 
+<!---sidebar begins-->
 <div id="myNav" class="overlay">
-
+  
 <div id="webSyd" class="sidebar  overlay-content">
   <div class="vertical-menu" >
+    <!--mobile view sidebar hide button-->
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
     <i class="fa fa-fw fa-arrow-alt-circle-left sydIcon"></i> 
     Close Menu <span class="arrow"><i class="fa fa-fw fa-times"></i></span>
   </a>
 
+    <!--sidebar link-->
     <a class=" dropdown-btn" href="#home">
       <i class="fa fa-fw fa-building sydIcon"></i> <span class="navName">Front Office</span>
       <span class="arrow">
@@ -88,11 +95,14 @@
         <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
       </span>
     </a>
+    <!--sidebar dropdown menu-->
     <div class="dropdown-container">
       <a href="#">Option 1</a>
       <a href="#">Option 2</a>
       <a href="#">Option 3</a>
     </div>
+
+    <!--sidebar link-->
     <a class=" dropdown-btn" href="#services">
       <i class="fa fa-fw fa-syringe sydIcon"></i> <span class="navName">Phlebotomy</span>
       <span class="arrow">
@@ -100,11 +110,14 @@
         <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
       </span>
     </a>
+    <!--sidebar dropdown menu-->
     <div class="dropdown-container">
       <a href="#">Option 1</a>
       <a href="#">Option 2</a>
       <a href="#">Option 3</a>
     </div>
+
+    <!--sidebar link-->
     <a class=" dropdown-btn" href="#clients">
       <i class="fa fa-fw fa-flask sydIcon"></i> <span class="navName">Laboratory</span>
       <span class="arrow">
@@ -112,11 +125,14 @@
         <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
       </span>
     </a>
+    <!--sidebar dropdown menu-->
     <div class="dropdown-container">
       <a href="#">Option 1</a>
       <a href="#">Option 2</a>
       <a href="#">Option 3</a>
     </div>
+
+    <!--sidebar link-->
     <a class=" dropdown-btn" href="#contact">
       <i class="fa fa-fw fa-book-open sydIcon"></i> <span class="navName">Admin</span>
       <span class="arrow">
@@ -124,11 +140,14 @@
         <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
       </span>
     </a>
+    <!--sidebar dropdown menu-->
     <div class="dropdown-container">
       <a href="#">Option 1</a>
       <a href="#">Option 2</a>
       <a href="#">Option 3</a>
     </div>
+
+    <!--sidebar link-->
     <a class=" dropdown-btn" href="#about">
       <i class="fa fa-fw fa-motorcycle sydIcon"></i> <span class="navName">Dispatch</span>
       <span class="arrow">
@@ -136,11 +155,14 @@
         <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
       </span>
     </a>
+    <!--sidebar dropdown menu-->
     <div class="dropdown-container">
       <a href="#">Option 1</a>
       <a href="#">Option 2</a>
       <a href="#">Option 3</a>
     </div>
+
+    <!--sidebar link-->
     <a class=" dropdown-btn" href="#services">
       <i class="fa fa-fw fa-microscope sydIcon"></i> <span class="navName">Analyzers</span>
       <span class="arrow">
@@ -148,11 +170,14 @@
         <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
       </span>
     </a>
+    <!--sidebar dropdown menu-->
     <div class="dropdown-container">
       <a href="#">Option 1</a>
       <a href="#">Option 2</a>
       <a href="#">Option 3</a>
     </div>
+
+    <!--sidebar link-->
     <a class=" dropdown-btn" href="#clients">
       <i class="fa fa-fw fa-check-double sydIcon"></i> <span class="navName">Qc</span>
       <span class="arrow">
@@ -160,12 +185,14 @@
         <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
       </span>
     </a>
+    <!--sidebar dropdown menu-->
     <div class="dropdown-container">
       <a href="#">Option 1</a>
       <a href="#">Option 2</a>
       <a href="#">Option 3</a>
     </div>
     
+    <!--sidebar link-->
     <a class=" dropdown-btn" href="#clients">
       <i class="fa fa-fw fa-money-bill sydIcon"></i> <span class="navName">Account</span>
       <span class="arrow">
@@ -173,12 +200,14 @@
         <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
       </span>
     </a>
+    <!--sidebar dropdown menu-->
     <div class="dropdown-container">
       <a href="#">Option 1</a>
       <a href="#">Option 2</a>
       <a href="#">Option 3</a>
     </div>
     
+    <!--sidebar link-->
     <a class="dropdown-btn" href="#contact">
       <i class="fa fa-fw fa-archive sydIcon"></i> <span class="navName"> Inventory</span>
        <span class="arrow">
@@ -186,6 +215,7 @@
          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
        </span>
     </a>
+    <!--sidebar dropdown menu-->
     <div class="dropdown-container">
       <a href="#">Option 1</a>
       <a href="#">Option 2</a>
@@ -194,23 +224,31 @@
       
   </div>
  </div>
-</div> 
+</div>
+<!--sidebar ends--> 
 
+<!--section begins-->
   <div id="webMain" class="main">
     <span><b>Blank Page</b></span>
+    <!--bread crumbs-->
     <span class="arrow">
         <a style="color:#ccc;">Home <i class="fa fa-fw fa-arrow-right"></i></a>
-        <a style="color:#ccc;">Page 1 <i class="fa fa-fw fa-arrow-right"></i></a> 
-         <b>Page 2</b>
+        <a style="color:#ccc;">Page 1 <i class="fa fa-fw fa-arrow-right"></i></a>
+        <b>Page 2</b>
     </span>
-
-     
+    <!-- page content begins here -->
+    ....   
 </div>
+<!--section ends-->
+
+<!--footer begins-->
 <div id="webBtm" class="btmbar">
        <small>
+        <!--info text-->
         <div class="btm-info">
             e-Lab LIS by Netwalkers NG (c) 2022. All rights reserved
         </div>
+        <!--footer links-->
         <div class="btm-link">
         <a href="#home" class="">About Us</a> |
         <a href="#news">Contact Us</a> |
@@ -218,7 +256,8 @@
         <a href="#contact">Privacy Policy</a>
         </div>
        </small> 
-      </div> 
+      </div>
+<!--footer ends--> 
    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
