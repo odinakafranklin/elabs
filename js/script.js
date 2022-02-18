@@ -57,13 +57,13 @@ function toggleSideBar() {
      let sideNames = document.getElementsByClassName("navName");
      for (let j = 0; j < sideNames.length; j++){
        setTimeout(()=>{
-       sideNames[j].style.display = "inline-block";
+       sideNames[j].style.display = " inline";
        },500);
      }
    let sideArrows = document.getElementsByClassName("arow");
      for (let k = 0; k < sideNames.length; k++){
        setTimeout(()=>{
-       sideArrows[k].style.display = "inline-block";
+       sideArrows[k].style.display = "inline ";
      },500);
      }
  }

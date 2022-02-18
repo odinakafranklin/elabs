@@ -268,19 +268,20 @@
     .overlay {
       height: 100%;
       width: 0%;
-      position: fixed; 
+      position: fixed; left: 10px;
       overflow-x: hidden;
-      transition: 0.5s;
+      overflow-y: scroll;
+      transition: 0.5s;  top: 4.5rem;
       z-index: 1;
     }
     
     .overlay-content {
+      max-height: 78.5%; 
       position: relative;
-      top: 1.25rem;
-      left: 8px;
-      width: 100%; 
+      overflow-y: scroll;
+      width: 100%;
+      
     }
-    
     .overlay a {
       padding: 8px;
       text-decoration: none;
@@ -298,7 +299,22 @@
       margin-left: 85%;
       margin-bottom: 10px;
     }
-    
+      
+    .vertical-menu a {
+      background-color: #fafafa;
+      color: rgb(91, 91, 91);
+      display: block;
+      padding: 12px;
+      text-decoration: none;
+    }
+    .vertical-menu {
+      background-color: #fafafa; 
+    }
+ 
+    .vertical-menu a:hover {
+      background-color: #ccc;
+    }
+  
     .user-name{
       display: none;
     }
@@ -424,24 +440,7 @@
         height: auto;
         min-height: 350px;
       }
-      
-      .vertical-menu a {
-        background-color: #fafafa;
-        color: rgb(91, 91, 91);
-        display: block;
-        padding: 12px;
-        text-decoration: none;
-      }
-      .vertical-menu {
-        background-color: #fafafa;
-        max-height: 65%;
-        overflow-y: auto;
-      }
-   
-      .vertical-menu a:hover {
-        background-color: #ccc;
-      }
-      
+    
       .btmbar { 
         background-color: #fafafa;
         bottom: 0; position: fixed;
