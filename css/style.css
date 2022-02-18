@@ -267,19 +267,18 @@
     
     .overlay {
       height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0; 
+      width: 0%;
+      position: fixed; 
       overflow-x: hidden;
       transition: 0.5s;
+      z-index: 1;
     }
     
     .overlay-content {
       position: relative;
-      top: 0;
-      width: 55%; 
+      top: 1.25rem;
+      left: 8px;
+      width: 100%; 
     }
     
     .overlay a {
@@ -289,18 +288,17 @@
       display: block;
       transition: 0.3s; 
     }
-    
+     
     .overlay a:hover {
       color: rgb(91, 91, 91);
       background-color: #ccc;
     }
     
     .overlay .closebtn {
-      border-bottom: 2px solid #9C3030;
+      margin-left: 85%;
+      margin-bottom: 10px;
     }
-    .overlay .closebtn a, .overlay .closebtn a:hover{
-      border-bottom: 2px solid #9C3030;
-    }
+    
     .user-name{
       display: none;
     }

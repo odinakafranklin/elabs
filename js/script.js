@@ -8,6 +8,7 @@ let wBtm = document.getElementById("webBtm");
 
 var i;
 
+//code for siebar dropdown menu
 for (i = 0; i < dropdown.length; i++) {
   let clickedNode = dropdown[i];
   clickedNode.addEventListener("click", function() {
@@ -29,6 +30,7 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 
+//code to toggle topnav dropdown menu
 const drop = () => {
   let dropMenu = document.getElementById('dropMenu');
 	if(dropMenu.style.visibility == "hidden"){
@@ -37,15 +39,37 @@ const drop = () => {
 		dropMenu.style.visibility = "hidden";
 	}
 }
-
-function openNav() {
-  document.getElementById("myNav").style.width = "100%";
+//code to hide or show sidebar in mobile view
+function toggleSideBar() {
+  let sidebar = document.getElementById("myNav");
+  if(sidebar.style.width == "55%"){
+     sidebar.style.width = "0%";
+     let sideNames = document.getElementsByClassName("navName");
+     for (let j = 0; j < sideNames.length; j++){
+       sideNames[j].style.display = "none";
+     }
+   let sideArrows = document.getElementsByClassName("arow");
+     for (let k = 0; k < sideNames.length; k++){
+       sideArrows[k].style.display = "none";
+     }
+ }else{
+     sidebar.style.width = "55%";
+     let sideNames = document.getElementsByClassName("navName");
+     for (let j = 0; j < sideNames.length; j++){
+       setTimeout(()=>{
+       sideNames[j].style.display = "inline-block";
+       },500);
+     }
+   let sideArrows = document.getElementsByClassName("arow");
+     for (let k = 0; k < sideNames.length; k++){
+       setTimeout(()=>{
+       sideArrows[k].style.display = "inline-block";
+     },500);
+     }
+ }
 }
 
-function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
-}
-
+//javascript to toggle sidebar between just icons and icons with text
 function toggleNav() { 
   if((wSyd.style.width != "2.65rem") && (window.innerWidth > "600") ){
     wSyd.style.width = "2.65rem";
@@ -78,6 +102,7 @@ function toggleNav() {
     }   
 }
 
+//script to rearrange page elements on screen size change
 const reshape = () =>{
   if(window.innerWidth <= 600){
   wSyd.style.width = "0";
