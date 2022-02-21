@@ -73,8 +73,8 @@ function toggleSideBar() {
 function toggleNav() { 
   if((wSyd.style.width != "2.65rem") && (window.innerWidth > "600") ){
     wSyd.style.width = "2.65rem";
-    wMain.style.marginLeft = "3rem";
-    wBtm.style.marginLeft = "3rem";
+    wMain.style.marginLeft = "3.2rem";
+    wBtm.style.left = "3.2rem";
     let sideNames = document.getElementsByClassName("navName");
       for (let j = 0; j < sideNames.length; j++){
         sideNames[j].style.display = "none";
@@ -84,9 +84,9 @@ function toggleNav() {
         sideArrows[k].style.display = "none";
       } 
     }else{
-    wSyd.style.width = "20%";
-    wMain.style.marginLeft = "20.75%";
-    wBtm.style.marginLeft = "20.75%";
+    wSyd.style.width = "12rem";
+    wMain.style.marginLeft = "12.65rem";
+    wBtm.style.left = "12.65rem";
     let sideNames = document.getElementsByClassName("navName");
       for (let j = 0; j < sideNames.length; j++){
         setTimeout(()=>{
@@ -106,8 +106,8 @@ function toggleNav() {
 const reshape = () =>{
   if(window.innerWidth <= 600){
   wSyd.style.width = "0";
-  wMain.style.margin = "8px";
-  wBtm.style.margin = "0";
+  wMain.style.margin = "10px";
+  wBtm.style.left = "0";
   let sideNames = document.getElementsByClassName("navName");
     for (let j = 0; j < sideNames.length; j++){
       setTimeout(()=>{
@@ -121,9 +121,10 @@ const reshape = () =>{
      },500);
     }
    }else{
-    wSyd.style.width = "20%";
-    wMain.style.marginLeft = "20.75%";
-    wBtm.style.marginLeft = "20.75%";
+    wSyd.style.width = "12rem";
+    wMain.style.marginLeft = "12.65rem";
+    wMain.style.margin = "";
+    wBtm.style.left = "12.65rem";
     let sideNames = document.getElementsByClassName("navName");
       for (let j = 0; j < sideNames.length; j++){
         setTimeout(()=>{
