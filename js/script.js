@@ -5,7 +5,7 @@ let arrowDn = document.getElementById("ardn");
 let wSyd = document.getElementById("webSyd");
 let wMain = document.getElementById("webMain");
 let wBtm = document.getElementById("webBtm");
-
+  let sidebar = document.getElementById("myNav");
 var i;
 
 //code for siebar dropdown menu
@@ -41,32 +41,14 @@ const drop = () => {
 }
 //code to hide or show sidebar in mobile view
 function toggleSideBar() {
-  let sidebar = document.getElementById("myNav");
-  if(sidebar.style.width == "55%"){
-     sidebar.style.width = "0%";
-     let sideNames = document.getElementsByClassName("navName");
-     for (let j = 0; j < sideNames.length; j++){
-       sideNames[j].style.display = "none";
-     }
-   let sideArrows = document.getElementsByClassName("arow");
-     for (let k = 0; k < sideNames.length; k++){
-       sideArrows[k].style.display = "none";
-     }
- }else{
-     sidebar.style.width = "55%";
-     let sideNames = document.getElementsByClassName("navName");
-     for (let j = 0; j < sideNames.length; j++){
-       setTimeout(()=>{
-       sideNames[j].style.display = " inline";
-       },500);
-     }
-   let sideArrows = document.getElementsByClassName("arow");
-     for (let k = 0; k < sideNames.length; k++){
-       setTimeout(()=>{
-       sideArrows[k].style.display = "inline ";
-     },500);
-     }
- }
+  //check if styl attribute is present and display is set to block
+  if(sidebar.hasAttribute("style") && sidebar.getAttribute('style') == 'display: block'){
+    //if present, set display to none
+    sidebar.setAttribute('style', 'display: none');
+  }else{
+    //else if absent, set style display to block
+    sidebar.setAttribute('style', 'display: block')
+  } 
 }
 
 //javascript to toggle sidebar between just icons and icons with text
@@ -99,12 +81,14 @@ function toggleNav() {
         sideArrows[k].style.display = "inline-block";
       },500);
       }
-    }   
+    } 
+      
 }
 
 //script to rearrange page elements on screen size change
 const reshape = () =>{
   if(window.innerWidth <= 600){
+  sidebar.style.display = "none";
   wSyd.style.width = "0";
   wMain.style.margin = "10px";
   wBtm.style.left = "0";
@@ -121,6 +105,7 @@ const reshape = () =>{
      },500);
     }
    }else{
+    sidebar.style.display = "block";
     wSyd.style.width = "12rem";
     wMain.style.marginLeft = "12.65rem";
     wMain.style.margin = "";
@@ -139,3 +124,13 @@ const reshape = () =>{
       }
    }
  }
+
+ // Get the modal
+var modal = document.getElementById('visitors_popup');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}

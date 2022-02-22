@@ -1,4 +1,140 @@
-@media screen and (min-width: 600px) {
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #9C3030;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 0; padding: 0.75rem;
+  position: relative; color: #fff;
+  background-color: #9C3030;
+}
+
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 99; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: auto; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  max-width: 400px;
+}
+
+/* The Close Button (x) */
+.close {
+  float:right ;
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold; margin-top: -1rem;
+  vertical-align: middle;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+table{
+  border: 1px solid #8F8989; 
+}
+
+.amt{
+  width: 10%;
+  padding: 3px;
+  margin: 0px;
+}
+ .nme{
+  width: 30%;
+  padding: 3px;
+  margin: 0px; 
+}
+ .tyms{
+  width: 20%;
+  padding: 3px;
+  margin: 0px;
+ }
+.thd{
+  padding: 5px;
+  color: #5B5B5B;
+  margin-bottom: 2rem;
+}
+tr.tbd{
+  color: #8F8989; font-weight: normal;
+}
+table{
+  overflow-x: auto;
+}
+@media screen and (min-width: 601px) {
   body { 
     margin: 0 auto;
     -webkit-font-smoothing: antialiased;
@@ -10,7 +146,9 @@
     scrollbar-color: rgba(0,0,0,0.5)  rgba(0,0,0,0.3);   /* scroll thumb and track */
     
   }
-  
+  #myNav{
+    display: block;
+  }
   ::-webkit-scrollbar {
     width: 5px;
   }
@@ -98,10 +236,9 @@
   .sidebar {
       height: 100%;
       width: 12rem ; 
-      position: fixed;
-      z-index: 1; font-weight: bold;
+      position: fixed; font-weight: bold;
       left: 0; font-size: 14px;
-      background-color: #fafafa;
+      background-color: #fff;
       overflow-x: hidden; 
       padding-top: 0px;
       margin-top: 10px;
@@ -119,7 +256,7 @@
     } 
     .main {  
       padding: 10px ;
-      background-color: #fafafa;
+      background-color: #fff;
       margin-bottom: 10px;
       height: 95%;
       box-shadow: 1px 1px 4px 3px #d4d1d1;
@@ -246,10 +383,39 @@
       text-align: left;
       margin-left: 60%;
     }
+    .miniTabs{
+      float: right;
+      font-size: 11px; 
+      margin-top: 1rem;
+      vertical-align: middle;
+   }
+   .miniTabs a{
+    margin: 5px 5px auto auto;
+    color: #f1f1f1;
+    padding:5px 1rem;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #9C3030;
+    border: none;
   }
-  
-  
-  @media screen and (max-width: 600px) {
+  .miniTabs a:active, .miniTabs a:hover{
+    margin-top: 5px;
+    color: #f1f1f1;
+    padding:5px 1rem;
+    width: 100%; color: #9C3030;
+    text-align: center;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #9C3030;
+    }
+    .miniTabs_div{
+      margin-top: 3rem;
+    }
+  }
+    
+@media screen and (max-width: 600px) {
+
     body { 
       margin: 0 auto;
       -webkit-font-smoothing: antialiased;
@@ -271,14 +437,15 @@
       border-radius: 10px;
       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
     }
-    
+    #myNav{
+      display: none;
+    }
     .overlay {
       height: 100%;
-      width: 0%;
-      position: fixed; left: 10px;
+      width: 55%;
+      position: fixed; left: 8px;
       overflow-x: hidden;
-      overflow-y: scroll;
-      transition: 0.5s;  top: 4.5rem;
+      overflow-y: scroll; top: 6.5rem;
       z-index: 1;
     }
     
@@ -444,8 +611,7 @@
         background-color: #fafafa;
         margin: 8px;
         box-shadow: 1px 1px 4px 3px #d4d1d1; 
-        height: auto;
-        min-height: 350px;
+        height: 80%;
       }
     
       .btmbar { 

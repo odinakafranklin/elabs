@@ -7,7 +7,7 @@
 <link href="css/all.css" rel="stylesheet">
 </head>
 <!--body of webpage with a js function on window screen change-->
-<body onresize="reshape()">
+<body onresize="">
 <!--topnav begins-->
 <div class="topnav">
   <!--topnav for web-->
@@ -74,157 +74,9 @@
 <!--topnav ends-->
 
 
-<!---sidebar begins-->
-<div id="myNav" class="overlay">
-  
-<div id="webSyd" class="sidebar  overlay-content">
-  <div class="vertical-menu" >
-    <!--mobile view sidebar hide button-->
-  <span href="javascript:void(0)" class="closebtn" onclick="toggleSideBar()">
-    <i class="fa fa-fw fa-times"></i>
-  </span>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-building sydIcon"></i> <span class="navName">Front Office</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-syringe sydIcon"></i> <span class="navName">Phlebotomy</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-flask sydIcon"></i> <span class="navName">Laboratory</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-book-open sydIcon"></i> <span class="navName">Admin</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-motorcycle sydIcon"></i> <span class="navName">Dispatch</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-microscope sydIcon"></i> <span class="navName">Analyzers</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-check-double sydIcon"></i> <span class="navName">Qc</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-    
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-money-bill sydIcon"></i> <span class="navName">Account</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-    
-    <!--sidebar link-->
-    <a class="dropdown-btn" href="#contact">
-      <i class="fa fa-fw fa-archive sydIcon"></i> <span class="navName"> Inventory</span>
-       <span class="arrow">
-         <i class="fa fa-fw fa-arrow-down arow"></i>
-         <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-       </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-      
-  </div>
- </div>
-</div>
-<!--sidebar ends--> 
 
 <!--section begins-->
+<div class="section">
   <div id="webMain" class="main">
     
     <span class="mobile_btn" href="#" style="cursor:pointer; margin-left: 1px;" onclick="toggleSideBar()">
@@ -233,25 +85,285 @@
     <!--bread crumbs-->
     <span class="arrow">
         <a style="color:#ccc;">Home <i class="fa fa-fw fa-arrow-right"></i></a>
-        <a style="color:#ccc;">Page 1 <i class="fa fa-fw fa-arrow-right"></i></a>
-        <b>Page 2</b>
+        <a style="color:#ccc;">Front Office <i class="fa fa-fw fa-arrow-right"></i></a>
+        <b>Clerical</b>
     </span>
     <!-- page content begins here -->
-    <div>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+    <br/><br/>
+    <div class="miniTabs">
+        <a onclick="document.getElementById('visitors_popup').style.display='block'" style="width:auto;" ><i class="fa fa-fw fa-user-plus"></i> Add visitors </a>
+        <a  ><i class="fa fa-fw fa-flag"></i> Complains </a>
+        <a  ><i class="fa fa-fw fa-phone"></i> Call Logs </a>
+        <a  ><i class="fa fa-fw fa-box-open"></i> Postals <i class="fa fa-fw fa-arrow-down"></i></a>
     </div>
+    <!--modals /popups-->
+
+    <div id="visitors_popup" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('visitors_popup').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <b> Add Visitors</b>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+             
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+             
+            
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Save</button>
+            
+          </div>
+        </form>
+      </div>
+
+    <div id="complains_popup" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <b> Add Visitors</b>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+             
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+             
+            
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Save</button>
+            
+          </div>
+        </form>
+      </div>
+
+    <div id="callLogs_popup" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <b> Add Visitors</b>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+             
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+             
+            
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Save</button>
+            
+          </div>
+        </form>
+      </div>
+
+    <div id="postals_popup" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <b> Add Visitors</b>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+             
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+             
+            
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Save</button>
+            
+          </div>
+        </form>
+      </div>
+    
     <br/>
-    <table>
+    <div>
+        <!--divs of miniTabs-->
+        <div class="miniTabs_div">
+      
+  <div class="basic">
+    <p style="text-align: left">Visitors </p>
+    
+    <input type="text" style="max-width:250px" placeholder="search" name="search" />
+    <table style="width: 100%;">
         <tbody>
-            <th></th>
-            <tb></tb>
+            <tr class="thd">
+                <td class="nme">Name</td> <td class="tyms">Visit To</td> <td class="tyms">Date</td> <td class="amt">In Time</td> <td class="amt">Out Time</td> <td class="amt">Actions</td>
+            </tr> 
+            <tr class="tbd">
+                <td class="nme">David Godbless</td> 
+                <td class="tyms">Adefemi John</td> 
+                <td class="tyms">22 Feb 2022</td> 
+                <td class="amt">2 PM</td> 
+                <td class="amt">3 PM</td> 
+                <td class="amt" style="color: #9C3030">
+                    <a><i class="fa fa-fw fa-trash"></i></a>
+                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                    <a><i class="fa fa-fw fa-search"></i></a>
+                </td>
+            </tr>
+            <tr class="tbd">
+                <td class="nme">David Godbless</td> 
+                <td class="tyms">Adefemi John</td> 
+                <td class="tyms">22 Feb 2022</td> 
+                <td class="amt">2 PM</td> 
+                <td class="amt">3 PM</td> 
+                <td class="amt" style="color: #9C3030">
+                    <a><i class="fa fa-fw fa-trash"></i></a>
+                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                    <a><i class="fa fa-fw fa-search"></i></a>
+                </td>
+            </tr>
+            <tr class="tbd">
+                <td class="nme">David Godbless</td> 
+                <td class="tyms">Adefemi John</td> 
+                <td class="tyms">22 Feb 2022</td> 
+                <td class="amt">2 PM</td> 
+                <td class="amt">3 PM</td> 
+                <td class="amt" style="color: #9C3030">
+                    <a><i class="fa fa-fw fa-trash"></i></a>
+                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                    <a><i class="fa fa-fw fa-search"></i></a>
+                </td>
+            </tr>
+            <tr class="tbd">
+                <td class="nme">David Godbless</td> 
+                <td class="tyms">Adefemi John</td> 
+                <td class="tyms">22 Feb 2022</td> 
+                <td class="amt">2 PM</td> 
+                <td class="amt">3 PM</td> 
+                <td class="amt" style="color: #9C3030">
+                    <a><i class="fa fa-fw fa-trash"></i></a>
+                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                    <a><i class="fa fa-fw fa-search"></i></a>
+                </td>
+            </tr>
+            <tr class="tbd">
+                <td class="nme">David Godbless</td> 
+                <td class="tyms">Adefemi John</td> 
+                <td class="tyms">22 Feb 2022</td> 
+                <td class="amt">2 PM</td> 
+                <td class="amt">3 PM</td> 
+                <td class="amt" style="color: #9C3030">
+                    <a><i class="fa fa-fw fa-trash"></i></a>
+                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                    <a><i class="fa fa-fw fa-search"></i></a>
+                </td>
+            </tr>
+            <tr class="tbd">
+                <td class="nme">David Godbless</td> 
+                <td class="tyms">Adefemi John</td> 
+                <td class="tyms">22 Feb 2022</td> 
+                <td class="amt">2 PM</td> 
+                <td class="amt">3 PM</td> 
+                <td class="amt" style="color: #9C3030">
+                    <a><i class="fa fa-fw fa-trash"></i></a>
+                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                    <a><i class="fa fa-fw fa-search"></i></a>
+                </td>
+            </tr>
+            <tr class="tbd">
+                <td class="nme">David Godbless</td> 
+                <td class="tyms">Adefemi John</td> 
+                <td class="tyms">22 Feb 2022</td> 
+                <td class="amt">2 PM</td> 
+                <td class="amt">3 PM</td> 
+                <td class="amt" style="color: #9C3030">
+                    <a><i class="fa fa-fw fa-trash"></i></a>
+                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                    <a><i class="fa fa-fw fa-search"></i></a>
+                </td>
+            </tr>
+            <tr class="tbd">
+                <td class="nme">David Godbless</td> 
+                <td class="tyms">Adefemi John</td> 
+                <td class="tyms">22 Feb 2022</td> 
+                <td class="amt">2 PM</td> 
+                <td class="amt">3 PM</td> 
+                <td class="amt" style="color: #9C3030">
+                    <a><i class="fa fa-fw fa-trash"></i></a>
+                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                    <a><i class="fa fa-fw fa-search"></i></a>
+                </td>
+            </tr>
+            <tr class="tbd">
+                <td class="nme">David Godbless</td> 
+                <td class="tyms">Adefemi John</td> 
+                <td class="tyms">22 Feb 2022</td> 
+                <td class="amt">2 PM</td> 
+                <td class="amt">3 PM</td> 
+                <td class="amt" style="color: #9C3030">
+                    <a><i class="fa fa-fw fa-trash"></i></a>
+                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                    <a><i class="fa fa-fw fa-search"></i></a>
+                </td>
+            </tr>
+            <tr class="tbd">
+                <td class="nme">David Godbless</td> 
+                <td class="tyms">Adefemi John</td> 
+                <td class="tyms">22 Feb 2022</td> 
+                <td class="amt">2 PM</td> 
+                <td class="amt">3 PM</td> 
+                <td class="amt" style="color: #9C3030">
+                    <a><i class="fa fa-fw fa-trash"></i></a>
+                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                    <a><i class="fa fa-fw fa-search"></i></a>
+                </td>
+            </tr>
         </tbody>
-    </table>   
+    </table>
+  </div>
+
+        </div>
+    </div>
+
 </div>
-<!--section ends-->
 
 <!--footer begins-->
 <div id="webBtm" class="btmbar">
@@ -268,8 +380,156 @@
         <a href="#contact">Privacy Policy</a>
         </div>
        </small> 
+</div>
+<!--footer ends-->
+
+</div>
+ <!--section ends-->
+ <!---sidebar begins-->
+<div id="myNav" class="overlay" >
+  
+  <div id="webSyd"  class="sidebar  overlay-content">
+    <div class="vertical-menu" >
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-building sydIcon"></i> <span class="navName">Front Office</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
       </div>
-<!--footer ends--> 
+  
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-syringe sydIcon"></i> <span class="navName">Phlebotomy</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+  
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-flask sydIcon"></i> <span class="navName">Laboratory</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+  
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-book-open sydIcon"></i> <span class="navName">Admin</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+  
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-motorcycle sydIcon"></i> <span class="navName">Dispatch</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+  
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-microscope sydIcon"></i> <span class="navName">Analyzers</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+  
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-check-double sydIcon"></i> <span class="navName">Qc</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+      
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-money-bill sydIcon"></i> <span class="navName">Account</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+      
+      <!--sidebar link-->
+      <a class="dropdown-btn" href="#contact">
+        <i class="fa fa-fw fa-archive sydIcon"></i> <span class="navName"> Inventory</span>
+         <span class="arrow">
+           <i class="fa fa-fw fa-arrow-down arow"></i>
+           <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+         </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+        
+    </div>
+   </div>
+  </div>
+  <!--sidebar ends--> 
+  
    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

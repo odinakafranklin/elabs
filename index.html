@@ -7,7 +7,7 @@
 <link href="css/all.css" rel="stylesheet">
 </head>
 <!--body of webpage with a js function on window screen change-->
-<body onresize="reshape()">
+<body onresize="">
 <!--topnav begins-->
 <div class="topnav">
   <!--topnav for web-->
@@ -74,158 +74,9 @@
 <!--topnav ends-->
 
 
-<!---sidebar begins-->
-<div id="myNav" class="overlay">
-  
-<div id="webSyd" class="sidebar  overlay-content">
-  <div class="vertical-menu" >
-    <!--mobile view sidebar hide button-->
-  <span href="javascript:void(0)" class="closebtn" onclick="toggleSideBar()">
-    <i class="fa fa-fw fa-times"></i>
-  </span>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-building sydIcon"></i> <span class="navName">Front Office</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-syringe sydIcon"></i> <span class="navName">Phlebotomy</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-flask sydIcon"></i> <span class="navName">Laboratory</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-book-open sydIcon"></i> <span class="navName">Admin</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-motorcycle sydIcon"></i> <span class="navName">Dispatch</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-microscope sydIcon"></i> <span class="navName">Analyzers</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-check-double sydIcon"></i> <span class="navName">Qc</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-    
-    <!--sidebar link-->
-    <a class=" dropdown-btn" href="javascript:void(0)">
-      <i class="fa fa-fw fa-money-bill sydIcon"></i> <span class="navName">Account</span>
-      <span class="arrow">
-        <i class="fa fa-fw fa-arrow-down arow"></i>
-        <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-      </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-    
-    <!--sidebar link-->
-    <a class="dropdown-btn" href="#contact">
-      <i class="fa fa-fw fa-archive sydIcon"></i> <span class="navName"> Inventory</span>
-       <span class="arrow">
-         <i class="fa fa-fw fa-arrow-down arow"></i>
-         <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
-       </span>
-    </a>
-    <!--sidebar dropdown menu-->
-    <div class="dropdown-container">
-      <a href="javascript:void(0)">Option 1</a>
-      <a href="javascript:void(0)">Option 2</a>
-      <a href="javascript:void(0)">Option 3</a>
-    </div>
-      
-  </div>
- </div>
-</div>
-<!--sidebar ends--> 
 
 <!--section begins-->
-<div id="xexion" class="section">
+<div class="section">
   <div id="webMain" class="main">
     
     <span class="mobile_btn" href="#" style="cursor:pointer; margin-left: 1px;" onclick="toggleSideBar()">
@@ -261,6 +112,151 @@
 
 </div>
  <!--section ends-->
+ <!---sidebar begins-->
+<div id="myNav" class="overlay" >
+  
+  <div id="webSyd"  class="sidebar  overlay-content">
+    <div class="vertical-menu" >
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-building sydIcon"></i> <span class="navName">Front Office</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+  
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-syringe sydIcon"></i> <span class="navName">Phlebotomy</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+  
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-flask sydIcon"></i> <span class="navName">Laboratory</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+  
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-book-open sydIcon"></i> <span class="navName">Admin</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+  
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-motorcycle sydIcon"></i> <span class="navName">Dispatch</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+  
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-microscope sydIcon"></i> <span class="navName">Analyzers</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+  
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-check-double sydIcon"></i> <span class="navName">Qc</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+      
+      <!--sidebar link-->
+      <a class=" dropdown-btn" href="javascript:void(0)">
+        <i class="fa fa-fw fa-money-bill sydIcon"></i> <span class="navName">Account</span>
+        <span class="arrow">
+          <i class="fa fa-fw fa-arrow-down arow"></i>
+          <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+        </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+      
+      <!--sidebar link-->
+      <a class="dropdown-btn" href="#contact">
+        <i class="fa fa-fw fa-archive sydIcon"></i> <span class="navName"> Inventory</span>
+         <span class="arrow">
+           <i class="fa fa-fw fa-arrow-down arow"></i>
+           <i style="display: none;" class="fa fa-fw fa-arrow-up"></i>
+         </span>
+      </a>
+      <!--sidebar dropdown menu-->
+      <div class="dropdown-container">
+        <a href="javascript:void(0)">Option 1</a>
+        <a href="javascript:void(0)">Option 2</a>
+        <a href="javascript:void(0)">Option 3</a>
+      </div>
+        
+    </div>
+   </div>
+  </div>
+  <!--sidebar ends--> 
+  
    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
