@@ -5,10 +5,34 @@ let arrowDn = document.getElementById("ardn");
 let wSyd = document.getElementById("webSyd");
 let wMain = document.getElementById("webMain");
 let wBtm = document.getElementById("webBtm");
-  let sidebar = document.getElementById("myNav");
-var i;
+let sidebar = document.getElementById("myNav");
+var i, a;
+let clerics = document.getElementById("clericals");
 
-//code for siebar dropdown menu
+let miniTabs = document.getElementsByClassName("miniTabsLinks");
+for (let b = 0; b < miniTabs.length; b++) {
+ let clickedBtn = miniTabs[b];
+ console.log(clickedBtn)
+ clickedBtn.addEventListener('click', function() {
+  clickedBtn.classList.add('active');
+ });
+}
+
+function switch_tab(t){
+ let selectedTab = document.getElementById(t);
+//for each of the chile node of the cleric element set display to none to hide them
+  for(let a = 0; a < clerics.children.length; a++){
+    //if clicked button doesnot corresponds to the child node 
+    //being displayed, hide the child node, else skip it
+    if(clerics.children[a].getAttribute('id') != selectedTab.getAttribute('id')){
+       clerics.children[a].style= 'display:none';
+    }
+  }
+  //set selected node to display attribute to block
+ selectedTab.setAttribute('style', 'display:block');
+}
+
+//code for sidebar dropdown menu
 for (i = 0; i < dropdown.length; i++) {
   let clickedNode = dropdown[i];
   clickedNode.addEventListener("click", function() {

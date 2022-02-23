@@ -1,0 +1,174 @@
+
+    .miniTabs{
+        text-align: right;
+        font-size: 11px; 
+        margin-top: 1rem; 
+        vertical-align: middle;
+     }
+     .miniTabs a{
+      margin: 5px 5px auto auto;
+      color: #f1f1f1;
+      padding:5px 1rem;
+      width: 100%; cursor: pointer;
+      text-align: center;
+      border-radius: 5px;
+      background-color: #9C3030;
+      border: 1px solid #9C3030;
+    }
+    .miniTabs a:active, .miniTabs a:hover{
+      margin: 5px 5px auto auto;
+      color: #f1f1f1;
+      padding:5px 1rem;
+      width: 100%; color: #9C3030;
+      text-align: center;
+      border-radius: 5px;
+      background-color: #fff;
+      border: 1px solid #9C3030;
+      }
+      .miniTabs_div{
+        margin-top: 3rem;
+      }
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box; border-radius: 8px;
+    box-shadow: 1px 1px 4px 3px #d4d1d1;
+  }
+  
+  /* Set a style for all buttons */
+  button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  button:hover {
+    opacity: 0.8;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #9C3030;
+  }
+  
+  /* Center the image and position the close button */
+  .imgcontainer {
+    text-align: center;
+    margin: 0; padding: 0.75rem;
+    position: relative; color: #fff;
+    background-color: #9C3030;
+  }
+  
+  img.avatar {
+    width: 40%;
+    border-radius: 50%;
+  }
+  
+  .container {
+    padding: 16px;
+  }
+  
+  span.psw {
+    float: right;
+    padding-top: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 99; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: auto; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    padding-top: 60px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    max-width: 400px;
+  }
+  
+  /* The Close Button (x) */
+  .close {
+    float:right ;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold; margin-top: -1rem;
+    vertical-align: middle;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: red;
+    cursor: pointer;
+  }
+  
+  /* Add Zoom Animation */
+  .animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+  }
+  
+  @-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+  }
+    
+  @keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+  }
+  table{
+    overflow-x: auto; 
+  }
+ 
+  .amt{
+    width: 10%;
+    padding: 5px;
+    margin: 0px;
+  }
+   .nme{
+    width: 30%;
+    padding: 5px;
+    margin: 0px; 
+  }
+   .tyms{
+    width: 20%;
+    padding: 5px;
+    margin: 0px;
+   }
+  .tbd{
+    color: #8F8989; 
+  }
+ 
+  .actns{
+    font-size: 10px;
+    color: #9C3030;
+  }
+  .actns a{
+    font-size: 10px;
+    margin: auto 3px;
+    color: #9C3030; display: inline-block;
+  }
+  .actns a:hover{
+    font-size: 10px;
+    color: #b6b6b6; 
+  }
+ 

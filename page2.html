@@ -4,6 +4,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 <link href="css/style.css" rel="stylesheet">
+<link href="css/sub_style.css" rel="stylesheet">
 <link href="css/all.css" rel="stylesheet">
 </head>
 <!--body of webpage with a js function on window screen change-->
@@ -91,13 +92,13 @@
     <!-- page content begins here -->
     <br/><br/>
     <div class="miniTabs">
-        <a onclick="document.getElementById('visitors_popup').style.display='block'" style="width:auto;" ><i class="fa fa-fw fa-user-plus"></i> Add visitors </a>
-        <a  ><i class="fa fa-fw fa-flag"></i> Complains </a>
-        <a  ><i class="fa fa-fw fa-phone"></i> Call Logs </a>
-        <a  ><i class="fa fa-fw fa-box-open"></i> Postals <i class="fa fa-fw fa-arrow-down"></i></a>
+        <a class="miniTabsLinks" onclick="switch_tab('visitors_tab')" ><i class="fa fa-fw fa-user-plus"></i> Add visitors </a>
+        <a class="miniTabsLinks" onclick="switch_tab('complains_tab')"><i class="fa fa-fw fa-flag"></i> Complains </a>
+        <a class="miniTabsLinks" onclick="switch_tab('call_logs_tab')"><i class="fa fa-fw fa-phone"></i> Call Logs </a>
+        <a class="miniTabsLinks" onclick="switch_tab('postals_tab')"><i class="fa fa-fw fa-box-open"></i> Postals <i class="fa fa-fw fa-arrow-down"></i></a>
     </div>
     <!--modals /popups-->
-
+<span>
     <div id="visitors_popup" class="modal">
   
         <form class="modal-content animate" action="/action_page.php" method="post">
@@ -159,78 +160,15 @@
           </div>
         </form>
       </div>
-
-    <div id="callLogs_popup" class="modal">
-  
-        <form class="modal-content animate" action="/action_page.php" method="post">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <b> Add Visitors</b>
-          </div>
-      
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-             
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-            
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-             
-            
-          </div>
-      
-          <div class="container" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">Save</button>
-            
-          </div>
-        </form>
-      </div>
-
-    <div id="postals_popup" class="modal">
-  
-        <form class="modal-content animate" action="/action_page.php" method="post">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <b> Add Visitors</b>
-          </div>
-      
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-             
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-            
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-             
-            
-          </div>
-      
-          <div class="container" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">Save</button>
-            
-          </div>
-        </form>
-      </div>
-    
+</span>
     <br/>
-    <div>
+    <div id="clericals" class="miniTabs_div">
         <!--divs of miniTabs-->
-        <div class="miniTabs_div">
       
-  <div class="basic">
+  <div id="visitors_tab" class="basic">
     <p style="text-align: left">Visitors </p>
     
-    <input type="text" style="max-width:250px" placeholder="search" name="search" />
+    <input type="text" style="max-width:250px" placeholder="enter name to search" name="search" />
     <table style="width: 100%;">
         <tbody>
             <tr class="thd">
@@ -242,125 +180,111 @@
                 <td class="tyms">22 Feb 2022</td> 
                 <td class="amt">2 PM</td> 
                 <td class="amt">3 PM</td> 
-                <td class="amt" style="color: #9C3030">
+                <td class="amt actns"  >
                     <a><i class="fa fa-fw fa-trash"></i></a>
                     <a><i class="fa fa-fw fa-pencil-alt"></i></a>
                     <a><i class="fa fa-fw fa-search"></i></a>
                 </td>
             </tr>
-            <tr class="tbd">
-                <td class="nme">David Godbless</td> 
-                <td class="tyms">Adefemi John</td> 
-                <td class="tyms">22 Feb 2022</td> 
-                <td class="amt">2 PM</td> 
-                <td class="amt">3 PM</td> 
-                <td class="amt" style="color: #9C3030">
-                    <a><i class="fa fa-fw fa-trash"></i></a>
-                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
-                    <a><i class="fa fa-fw fa-search"></i></a>
-                </td>
-            </tr>
-            <tr class="tbd">
-                <td class="nme">David Godbless</td> 
-                <td class="tyms">Adefemi John</td> 
-                <td class="tyms">22 Feb 2022</td> 
-                <td class="amt">2 PM</td> 
-                <td class="amt">3 PM</td> 
-                <td class="amt" style="color: #9C3030">
-                    <a><i class="fa fa-fw fa-trash"></i></a>
-                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
-                    <a><i class="fa fa-fw fa-search"></i></a>
-                </td>
-            </tr>
-            <tr class="tbd">
-                <td class="nme">David Godbless</td> 
-                <td class="tyms">Adefemi John</td> 
-                <td class="tyms">22 Feb 2022</td> 
-                <td class="amt">2 PM</td> 
-                <td class="amt">3 PM</td> 
-                <td class="amt" style="color: #9C3030">
-                    <a><i class="fa fa-fw fa-trash"></i></a>
-                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
-                    <a><i class="fa fa-fw fa-search"></i></a>
-                </td>
-            </tr>
-            <tr class="tbd">
-                <td class="nme">David Godbless</td> 
-                <td class="tyms">Adefemi John</td> 
-                <td class="tyms">22 Feb 2022</td> 
-                <td class="amt">2 PM</td> 
-                <td class="amt">3 PM</td> 
-                <td class="amt" style="color: #9C3030">
-                    <a><i class="fa fa-fw fa-trash"></i></a>
-                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
-                    <a><i class="fa fa-fw fa-search"></i></a>
-                </td>
-            </tr>
-            <tr class="tbd">
-                <td class="nme">David Godbless</td> 
-                <td class="tyms">Adefemi John</td> 
-                <td class="tyms">22 Feb 2022</td> 
-                <td class="amt">2 PM</td> 
-                <td class="amt">3 PM</td> 
-                <td class="amt" style="color: #9C3030">
-                    <a><i class="fa fa-fw fa-trash"></i></a>
-                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
-                    <a><i class="fa fa-fw fa-search"></i></a>
-                </td>
-            </tr>
-            <tr class="tbd">
-                <td class="nme">David Godbless</td> 
-                <td class="tyms">Adefemi John</td> 
-                <td class="tyms">22 Feb 2022</td> 
-                <td class="amt">2 PM</td> 
-                <td class="amt">3 PM</td> 
-                <td class="amt" style="color: #9C3030">
-                    <a><i class="fa fa-fw fa-trash"></i></a>
-                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
-                    <a><i class="fa fa-fw fa-search"></i></a>
-                </td>
-            </tr>
-            <tr class="tbd">
-                <td class="nme">David Godbless</td> 
-                <td class="tyms">Adefemi John</td> 
-                <td class="tyms">22 Feb 2022</td> 
-                <td class="amt">2 PM</td> 
-                <td class="amt">3 PM</td> 
-                <td class="amt" style="color: #9C3030">
-                    <a><i class="fa fa-fw fa-trash"></i></a>
-                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
-                    <a><i class="fa fa-fw fa-search"></i></a>
-                </td>
-            </tr>
-            <tr class="tbd">
-                <td class="nme">David Godbless</td> 
-                <td class="tyms">Adefemi John</td> 
-                <td class="tyms">22 Feb 2022</td> 
-                <td class="amt">2 PM</td> 
-                <td class="amt">3 PM</td> 
-                <td class="amt" style="color: #9C3030">
-                    <a><i class="fa fa-fw fa-trash"></i></a>
-                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
-                    <a><i class="fa fa-fw fa-search"></i></a>
-                </td>
-            </tr>
-            <tr class="tbd">
-                <td class="nme">David Godbless</td> 
-                <td class="tyms">Adefemi John</td> 
-                <td class="tyms">22 Feb 2022</td> 
-                <td class="amt">2 PM</td> 
-                <td class="amt">3 PM</td> 
-                <td class="amt" style="color: #9C3030">
-                    <a><i class="fa fa-fw fa-trash"></i></a>
-                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
-                    <a><i class="fa fa-fw fa-search"></i></a>
-                </td>
-            </tr>
+             
         </tbody>
     </table>
+    <span class="arrow">
+        <a><i class="fa fa-fw fa-angle-left"></i></a>
+        <a><i class="fa fa-fw fa-angle-right"></i></a>
+    </span>
   </div>
-
-        </div>
+      
+  <div id="complains_tab" style="display: none;" class="basic">
+              <p style="text-align: left">Complain List </p>
+              
+              <input type="text" style="max-width:250px" placeholder="enter name to search" name="search" />
+              <table style="width: 100%;">
+                  <tbody>
+                      <tr class="thd">
+                          <td class="nme">Name</td> <td class="tyms">Visit To</td> <td class="tyms">Date</td> <td class="amt">In Time</td> <td class="amt">Out Time</td> <td class="amt">Actions</td>
+                      </tr> 
+                      <tr class="tbd">
+                          <td class="nme">David Godbless</td> 
+                          <td class="tyms">Adefemi John</td> 
+                          <td class="tyms">22 Feb 2022</td> 
+                          <td class="amt">2 PM</td> 
+                          <td class="amt">3 PM</td> 
+                          <td class="amt actns"  >
+                              <a><i class="fa fa-fw fa-trash"></i></a>
+                              <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                              <a><i class="fa fa-fw fa-search"></i></a>
+                          </td>
+                      </tr>
+                       
+                  </tbody>
+              </table>
+              <span class="arrow">
+                  <a><i class="fa fa-fw fa-angle-left"></i></a>
+                  <a><i class="fa fa-fw fa-angle-right"></i></a>
+              </span>
+  </div>
+  
+  <div id="call_logs_tab" style="display: none;" class="basic">
+    <p style="text-align: left">Call Logs </p>
+    
+    <input type="text" style="max-width:250px" placeholder="enter name to search" name="search" />
+    <table style="width: 100%;">
+        <tbody>
+            <tr class="thd">
+                <td class="nme">Name</td> <td class="tyms">Visit To</td> <td class="tyms">Date</td> <td class="amt">In Time</td> <td class="amt">Out Time</td> <td class="amt">Actions</td>
+            </tr> 
+            <tr class="tbd">
+                <td class="nme">David Godbless</td> 
+                <td class="tyms">Adefemi John</td> 
+                <td class="tyms">22 Feb 2022</td> 
+                <td class="amt">2 PM</td> 
+                <td class="amt">3 PM</td> 
+                <td class="amt actns"  >
+                    <a><i class="fa fa-fw fa-trash"></i></a>
+                    <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                    <a><i class="fa fa-fw fa-search"></i></a>
+                </td>
+            </tr>
+             
+        </tbody>
+    </table>
+    <span class="arrow">
+        <a><i class="fa fa-fw fa-angle-left"></i></a>
+        <a><i class="fa fa-fw fa-angle-right"></i></a>
+    </span>
+  </div>
+      
+  <div id="postals_tab" style="display: none;" class="basic">
+              <p style="text-align: left">Postals </p>
+              
+              <input type="text" style="max-width:250px" placeholder="enter name to search" name="search" />
+              <table style="width: 100%;">
+                  <tbody>
+                      <tr class="thd">
+                          <td class="nme">Name</td> <td class="tyms">Visit To</td> <td class="tyms">Date</td> <td class="amt">In Time</td> <td class="amt">Out Time</td> <td class="amt">Actions</td>
+                      </tr> 
+                      <tr class="tbd">
+                          <td class="nme">David Godbless</td> 
+                          <td class="tyms">Adefemi John</td> 
+                          <td class="tyms">22 Feb 2022</td> 
+                          <td class="amt">2 PM</td> 
+                          <td class="amt">3 PM</td> 
+                          <td class="amt actns"  >
+                              <a><i class="fa fa-fw fa-trash"></i></a>
+                              <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                              <a><i class="fa fa-fw fa-search"></i></a>
+                          </td>
+                      </tr>
+                       
+                  </tbody>
+              </table>
+              <span class="arrow">
+                  <a><i class="fa fa-fw fa-angle-left"></i></a>
+                  <a><i class="fa fa-fw fa-angle-right"></i></a>
+              </span>
+  </div>
+ 
     </div>
 
 </div>
