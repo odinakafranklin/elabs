@@ -1,6 +1,6 @@
-
 @media screen and (min-width: 601px) {
-  body { 
+  body, html { 
+    height: 100%;
     margin: 0 auto;
     -webkit-font-smoothing: antialiased;
     color: rgb(91, 91, 91);
@@ -11,6 +11,20 @@
     scrollbar-color: rgba(0,0,0,0.5)  rgba(0,0,0,0.3);   /* scroll thumb and track */
     
   }
+  .noticeMenu{
+    width: 200px; position: absolute;
+    padding: 3px; right:12rem;
+    border-radius: 5px; margin-top: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 1px 4px 2px #d4d1d1;
+    font-size: 11px;
+    z-index: 15; text-align: left;
+  }
+  .noticeMenuitem{
+    display: block;
+    padding:10px; text-decoration: none;
+  }
+  
   #myNav{
     display: block;
   }
@@ -56,7 +70,7 @@
     position: absolute;
     right: 3%; box-shadow: 1px 1px 4px 2px #d4d1d1;
     top: 60px; font-size: 11px;
-    z-index: 99;
+    z-index: 10;
   }
   .menu-drop-item{
     display: block;
@@ -121,17 +135,16 @@
     } 
     .main {  
       padding: 10px ;
-      background-color: #fff;
-      margin-bottom: 2rem;
-      height: auto;
+      background-color: #fff; 
+      height: auto; margin-bottom: 10px;
       min-height: 76.8%; overflow-y: auto;
       box-shadow: 1px 1px 4px 3px #d4d1d1;
       margin-left: 12.65rem;
     }
     .btmbar { 
-      background-color: #fafafa;position: fixed;
-      bottom: 0; padding: 1rem; width: 100%;
-      right: 0; left: 12.65rem;
+      background-color: #fff;
+      padding: 1rem;  
+      margin-left:12.65rem;
       box-shadow: 1px 1px 4px 3px #dad6d6;
     }
     .btmbar a {
@@ -246,10 +259,11 @@
       margin-bottom: -14px;
     }
     .btm-link{
-      text-align: left;
-      margin-left: 60%;
+      text-align: right;
+      margin-right: 10px;
     }
 
+  
   }
     
 @media screen and (max-width: 600px) {
@@ -275,6 +289,20 @@
       border-radius: 10px;
       -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
     }
+    .noticeMenu{
+      width: 180px; position: absolute;
+      padding: 3px; right:1rem;
+      border-radius: 5px; margin-top: 0.5rem;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 1px 1px 4px 2px #d4d1d1;
+      font-size: 11px;
+      z-index: 15; text-align: left;
+    }
+    .noticeMenuitem{
+      display: block;
+      padding:10px; text-decoration: none;
+    }
+    
     #myNav{
       display: none;
     }

@@ -8,13 +8,33 @@ let wBtm = document.getElementById("webBtm");
 let sidebar = document.getElementById("myNav");
 var i, a;
 let clerics = document.getElementById("clericals");
+  let notice = document.getElementById('noticeMenu');
+  let dropMenu = document.getElementById('dropMenu'); 
+  let postals = document.getElementById('postals_dropMenu'); 
 
+   // When the user clicks anywhere outside of the modal, close it
+window.onclick = function(e) {
+  if (e.target == wMain) {
+    console.log("clicked body")
+    notice.style.visibility = "hidden";
+    dropMenu.style.visibility = "hidden";
+    postals.style.visibility = "hidden";
+  }
+}  
 let miniTabs = document.getElementsByClassName("miniTabsLinks");
 for (let b = 0; b < miniTabs.length; b++) {
- let clickedBtn = miniTabs[b];
- console.log(clickedBtn)
- clickedBtn.addEventListener('click', function() {
-  clickedBtn.classList.add('active');
+   let clickedBtn = miniTabs[b];
+   clickedBtn.classList.remove("active");
+   clickedBtn.addEventListener("click", function() {
+    let current = document.getElementsByClassName("m_active");
+
+    // If there's no active class
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" m_active", "");
+    }
+
+    // Add the active class to the current/clicked button
+    this.className += " m_active";
  });
 }
 
@@ -54,15 +74,37 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 
+//code to toggle notification dropdown menu
+const dropNotify = () => {
+
+  console.log(notice);
+	if(notice.style.visibility == "hidden"){
+    notice.style.visibility = "visible";
+	}else{
+		notice.style.visibility = "hidden";
+	}
+}
+
 //code to toggle topnav dropdown menu
 const drop = () => {
-  let dropMenu = document.getElementById('dropMenu');
+
 	if(dropMenu.style.visibility == "hidden"){
      dropMenu.style.visibility = "visible";
 	}else{
 		dropMenu.style.visibility = "hidden";
 	}
 }
+
+//code to toggle postals dropdown menu
+const dropPostals = () => {
+
+	if(postals.style.visibility == "hidden"){
+    postals.style.visibility = "visible";
+	}else{
+		postals.style.visibility = "hidden";
+	}
+}
+
 //code to hide or show sidebar in mobile view
 function toggleSideBar() {
   //check if styl attribute is present and display is set to block
@@ -80,7 +122,7 @@ function toggleNav() {
   if((wSyd.style.width != "2.65rem") && (window.innerWidth > "600") ){
     wSyd.style.width = "2.65rem";
     wMain.style.marginLeft = "3.2rem";
-    wBtm.style.left = "3.2rem";
+    wBtm.style.marginLeft = "3.2rem";
     let sideNames = document.getElementsByClassName("navName");
       for (let j = 0; j < sideNames.length; j++){
         sideNames[j].style.display = "none";
@@ -92,7 +134,7 @@ function toggleNav() {
     }else{
     wSyd.style.width = "12rem";
     wMain.style.marginLeft = "12.65rem";
-    wBtm.style.left = "12.65rem";
+    wBtm.style.marginLeft = "12.65rem";
     let sideNames = document.getElementsByClassName("navName");
       for (let j = 0; j < sideNames.length; j++){
         setTimeout(()=>{

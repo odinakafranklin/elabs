@@ -28,9 +28,32 @@
   </span>
  
   <div class="sub-top-nav">
-    <a href="#">
+    <a onclick="dropNotify()" href="#">
       <i class="fa fa-fw fa-bell nav-icon"></i><sup class="notify">1</sup> 
     </a>
+    <!--notification dropdown-->
+    <div  id="noticeMenu" style="visibility:hidden;" class="noticeMenu">
+     
+      <div class="noticeMenuitem">
+        <span class="drop-icon"><i class="fa fa-fw fa-user "></i></span> 
+        <a href="#"><b>User Record Update</b></a><br/>
+        <small class="info">new user created</small>
+      </div>
+
+      <div class="noticeMenuitem">
+        <span class="drop-icon"><i class="fa fa-fw fa-cogs"></i></span> 
+        <a href="#"><b>Help & Support</b></a><br/>
+        <small class="info">Contact & FAC</small>
+      </div>
+
+      <div class="noticeMenuitem"> 
+        <span class="drop-icon"><i class="fa fa-fw fa-microphone"></i></span> 
+        <a href="#"><b>Complain</b></a><br/>
+        <small class="info">Report an Issue</small>
+      </div>
+    
+    </div>
+
     <a href="#" class="user-name">
       <i class="fa fa-fw fa-user-circle nav-icon"></i> <b >David Godbless</b>
     </a>
@@ -92,10 +115,18 @@
     <!-- page content begins here -->
     <br/><br/>
     <div class="miniTabs">
-        <a class="miniTabsLinks" onclick="switch_tab('visitors_tab')" ><i class="fa fa-fw fa-user-plus"></i> Add visitors </a>
-        <a class="miniTabsLinks" onclick="switch_tab('complains_tab')"><i class="fa fa-fw fa-flag"></i> Complains </a>
-        <a class="miniTabsLinks" onclick="switch_tab('call_logs_tab')"><i class="fa fa-fw fa-phone"></i> Call Logs </a>
-        <a class="miniTabsLinks" onclick="switch_tab('postals_tab')"><i class="fa fa-fw fa-box-open"></i> Postals <i class="fa fa-fw fa-arrow-down"></i></a>
+        <span class="miniTabsLinks" onclick="switch_tab('visitors_tab')" ><i class="fa fa-fw fa-user-plus"></i> Add visitors </span>
+        <span class="miniTabsLinks" onclick="switch_tab('complains_tab')"><i class="fa fa-fw fa-flag"></i> Complains </span>
+        <span class="miniTabsLinks" onclick="switch_tab('call_logs_tab')"><i class="fa fa-fw fa-phone"></i> Call_Logs </span>
+        <span class="miniTabsLinks" onclick="dropPostals()"><i class="fa fa-fw fa-box-open"></i> Postals <i class="fa fa-fw fa-arrow-down"></i></span>
+        <div  id="postals_dropMenu" style="visibility:hidden;" class="postals_menu-drop">
+          <div class="postals_menu-drop-item"> 
+            <a href="#"><b>Receive</b></a> 
+          </div>
+          <div class="postals_menu-drop-item">  
+            <a onclick="switch_tab('postals_tab')" href="#"><b>Dispatch</b></a>
+          </div>
+        </div>
     </div>
     <!--modals /popups-->
 <span>
@@ -309,13 +340,14 @@
 
 </div>
  <!--section ends-->
+
  <!---sidebar begins-->
 <div id="myNav" class="overlay" >
   
   <div id="webSyd"  class="sidebar  overlay-content">
     <div class="vertical-menu" >
       <!--sidebar link-->
-      <a class=" dropdown-btn" href="javascript:void(0)">
+      <a class="dropdown-btn" href="javascript:void(0)">
         <i class="fa fa-fw fa-building sydIcon"></i> <span class="navName">Front Office</span>
         <span class="arrow">
           <i class="fa fa-fw fa-arrow-down arow"></i>

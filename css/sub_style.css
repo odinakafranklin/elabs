@@ -5,7 +5,7 @@
         margin-top: 1rem; 
         vertical-align: middle;
      }
-     .miniTabs a{
+     .miniTabsLinks {
       margin: 5px 5px auto auto;
       color: #f1f1f1;
       padding:5px 1rem;
@@ -15,7 +15,7 @@
       background-color: #9C3030;
       border: 1px solid #9C3030;
     }
-    .miniTabs a:active, .miniTabs a:hover{
+    .miniTabsLinks:hover{
       margin: 5px 5px auto auto;
       color: #f1f1f1;
       padding:5px 1rem;
@@ -26,7 +26,7 @@
       border: 1px solid #9C3030;
       }
       .miniTabs_div{
-        margin-top: 3rem;
+        margin-top: 2rem;
       }
 /* Full-width input fields */
 input[type=text], input[type=password] {
@@ -171,4 +171,30 @@ input[type=text], input[type=password] {
     font-size: 10px;
     color: #b6b6b6; 
   }
- 
+ .m_active{
+  margin: 5px 5px auto auto;
+  color: #f1f1f1;
+  padding:5px 1rem;
+  width: 100%; color: #9C3030;
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid #9C3030;
+ }
+ .postals_menu-drop{
+  width: 100px; position: absolute;
+  padding: 3px; right:1rem;
+  border-radius: 5px; margin-top: 0.8rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 1px 4px 2px #d4d1d1;
+  font-size: 11px;
+  z-index: 2; text-align: left;
+}
+.postals_menu-drop-item{
+  display: block;
+  padding:10px; text-decoration: none;
+}
+.postals_menu-drop-item a:hover{
+  padding-bottom:5px;
+  border-bottom: 2px solid #9C3030;
+}
