@@ -36,7 +36,7 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box; border-radius: 8px;
-    box-shadow: 1px 1px 4px 3px #d4d1d1;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
   }
   
   /* Set a style for all buttons */
@@ -135,33 +135,25 @@ input[type=text], input[type=password] {
     from {transform: scale(0)} 
     to {transform: scale(1)}
   }
-  table{
-    overflow-x: auto; 
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%; 
   }
- 
-  .amt{
-    width: 10%;
-    padding: 5px;
-    margin: 0px;
+  th{
+    padding-bottom: 10px;
   }
-   .nme{
-    width: 30%;
-    padding: 5px;
-    margin: 0px; 
+  th, td {
+    text-align: left;
+    padding: 8px;
   }
-   .tyms{
-    width: 20%;
-    padding: 5px;
-    margin: 0px;
-   }
-  .tbd{
-    color: #8F8989; 
+  
+  tr td{
+    border-top: 1px solid #E5E5E5;
+    color: #8F8989;
   }
- 
-  .actns{
-    font-size: 10px;
-    color: #9C3030;
-  }
+  
+  
   .actns a{
     font-size: 10px;
     margin: auto 3px;
@@ -197,4 +189,24 @@ input[type=text], input[type=password] {
 .postals_menu-drop-item a:hover{
   padding-bottom:5px;
   border-bottom: 2px solid #9C3030;
+}
+.addTabs{
+  margin: -2.5rem 5px auto auto;
+  color: #f1f1f1;
+  padding:3px 1rem;
+  cursor: pointer; width: 150px;
+  text-align: center;
+  border-radius: 5px; font-size: 14px;
+  background-color: #9C3030;
+  border: 1px solid #9C3030;
+}
+.basic{
+  overflow-x:auto;
+  margin: auto 0.5rem;
+}
+.navArrow{
+  color: #9C3030;
+  font-size: 1rem;
+  margin-top: 2rem;
+  text-align: right;
 }

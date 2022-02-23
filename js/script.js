@@ -27,7 +27,7 @@ for (let b = 0; b < miniTabs.length; b++) {
    clickedBtn.classList.remove("active");
    clickedBtn.addEventListener("click", function() {
     let current = document.getElementsByClassName("m_active");
-
+    
     // If there's no active class
     if (current.length > 0) {
       current[0].className = current[0].className.replace(" m_active", "");
@@ -47,6 +47,14 @@ function switch_tab(t){
     if(clerics.children[a].getAttribute('id') != selectedTab.getAttribute('id')){
        clerics.children[a].style= 'display:none';
     }
+  }
+  //hide dropdwn of postals after a menu is selected
+  if(t === "postals_tab"){
+    dropPostals();
+  }
+  //or if any other tab button is selected
+  else if(t !== "postals_tab"){
+    postals.style.visibility = "hidden";
   }
   //set selected node to display attribute to block
  selectedTab.setAttribute('style', 'display:block');
@@ -199,4 +207,9 @@ window.onclick = function(event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
+}
+
+//code to show modal popup
+const showModal = (a) => {
+  document.getElementById(a).style.display='block';
 }

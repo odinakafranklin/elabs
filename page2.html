@@ -121,10 +121,10 @@
         <span class="miniTabsLinks" onclick="dropPostals()"><i class="fa fa-fw fa-box-open"></i> Postals <i class="fa fa-fw fa-arrow-down"></i></span>
         <div  id="postals_dropMenu" style="visibility:hidden;" class="postals_menu-drop">
           <div class="postals_menu-drop-item"> 
-            <a href="#"><b>Receive</b></a> 
+            <a onclick="switch_tab('postals_tab')" href="#"><b>Receive</b></a> 
           </div>
           <div class="postals_menu-drop-item">  
-            <a onclick="switch_tab('postals_tab')" href="#"><b>Dispatch</b></a>
+            <a  href="#"><b>Dispatch</b></a>
           </div>
         </div>
     </div>
@@ -165,7 +165,7 @@
   
         <form class="modal-content animate" action="/action_page.php" method="post">
           <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <span onclick="document.getElementById('complains_popup').style.display='none'" class="close" title="Close Modal">&times;</span>
             <b> Add Visitors</b>
           </div>
       
@@ -191,19 +191,90 @@
           </div>
         </form>
       </div>
+
+    <div id="call_log_popup" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('call_log_popup').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <b> Add Call Logs</b>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+      
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+             
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+             
+            
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Save</button>
+            
+          </div>
+        </form>
+      </div>
+
+    <div id="receive_item_popup" class="modal">
+  
+        <form class="modal-content animate" action="/action_page.php" method="post">
+          <div class="imgcontainer">
+            <span onclick="document.getElementById('receive_item_popup').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <b> Receive an Item</b>
+          </div>
+      
+          <div class="container">
+            <label for="uname"><b>From</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required />
+      
+            <label for="psw"><b>To</b></label>
+            <input type="text" placeholder="Enter Password" name="psw" required />
+             
+            <label for="psw"><b>Address</b></label>
+            <input type="text" placeholder="Enter Password" name="psw" required />
+            
+            <label for="psw"><b>Date</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required />
+            
+            <label for="psw"><b>Date</b></label>
+            <textarea style="width: 100%; box-sizing: border-box;"></textarea>
+            
+          </div>
+      
+          <div class="container" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">Save</button>
+            
+          </div>
+        </form>
+      </div>
 </span>
     <br/>
     <div id="clericals" class="miniTabs_div">
         <!--divs of miniTabs-->
       
   <div id="visitors_tab" class="basic">
-    <p style="text-align: left">Visitors </p>
+    <p style="text-align: left">Visitors 
+      <div class="addTabs" onclick="showModal('visitors_popup')">Add Visitor</div>
+    </p>
     
     <input type="text" style="max-width:250px" placeholder="enter name to search" name="search" />
-    <table style="width: 100%;">
-        <tbody>
+        <div style="overflow-x:auto;">
+          <table>
             <tr class="thd">
-                <td class="nme">Name</td> <td class="tyms">Visit To</td> <td class="tyms">Date</td> <td class="amt">In Time</td> <td class="amt">Out Time</td> <td class="amt">Actions</td>
+                <th class="nme">Name</th> 
+                <th class="tyms">Visit To</th> 
+                <th class="tyms">Date</th> 
+                <th class="amt">In Time</th> 
+                <th class="amt">Out Time</th> 
+                <th class="amt">Actions</th>
             </tr> 
             <tr class="tbd">
                 <td class="nme">David Godbless</td> 
@@ -217,17 +288,42 @@
                     <a><i class="fa fa-fw fa-search"></i></a>
                 </td>
             </tr>
-             
-        </tbody>
-    </table>
-    <span class="arrow">
+            <tr class="tbd">
+              <td class="nme">David Godbless</td> 
+              <td class="tyms">Adefemi John</td> 
+              <td class="tyms">22 Feb 2022</td> 
+              <td class="amt">2 PM</td> 
+              <td class="amt">3 PM</td> 
+              <td class="amt actns"  >
+                  <a><i class="fa fa-fw fa-trash"></i></a>
+                  <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                  <a><i class="fa fa-fw fa-search"></i></a>
+              </td>
+            </tr>
+            <tr class="tbd">
+              <td class="nme">David Godbless</td> 
+              <td class="tyms">Adefemi John</td> 
+              <td class="tyms">22 Feb 2022</td> 
+              <td class="amt">2 PM</td> 
+              <td class="amt">3 PM</td> 
+              <td class="amt actns"  >
+                  <a><i class="fa fa-fw fa-trash"></i></a>
+                  <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                  <a><i class="fa fa-fw fa-search"></i></a>
+              </td>
+          </tr>
+          </table>
+        </div>
+  </div>
+     <div class="navArrow">
         <a><i class="fa fa-fw fa-angle-left"></i></a>
         <a><i class="fa fa-fw fa-angle-right"></i></a>
-    </span>
-  </div>
-      
+     </div>
+
   <div id="complains_tab" style="display: none;" class="basic">
-              <p style="text-align: left">Complain List </p>
+              <p style="text-align: left">Complain List 
+                <div class="addTabs" onclick="showModal('complains_popup')">Add Complain</div>
+              </p>
               
               <input type="text" style="max-width:250px" placeholder="enter name to search" name="search" />
               <table style="width: 100%;">
@@ -257,7 +353,9 @@
   </div>
   
   <div id="call_logs_tab" style="display: none;" class="basic">
-    <p style="text-align: left">Call Logs </p>
+    <p style="text-align: left">Call Logs 
+      <div class="addTabs" onclick="showModal('call_log_popup')">Add Call Log</div>
+    </p>
     
     <input type="text" style="max-width:250px" placeholder="enter name to search" name="search" />
     <table style="width: 100%;">
@@ -287,13 +385,15 @@
   </div>
       
   <div id="postals_tab" style="display: none;" class="basic">
-              <p style="text-align: left">Postals </p>
+              <p style="text-align: left">Recieved Items List 
+                <div class="addTabs" onclick="showModal('receive_item_popup')">Recieve an Item</div>
+              </p>
               
               <input type="text" style="max-width:250px" placeholder="enter name to search" name="search" />
               <table style="width: 100%;">
                   <tbody>
                       <tr class="thd">
-                          <td class="nme">Name</td> <td class="tyms">Visit To</td> <td class="tyms">Date</td> <td class="amt">In Time</td> <td class="amt">Out Time</td> <td class="amt">Actions</td>
+                          <td class="nme">From</td> <td class="tyms">To</td> <td class="tyms">Note</td> <td class="amt">Address</td> <td class="amt">Date</td> <td class="amt">Actions</td>
                       </tr> 
                       <tr class="tbd">
                           <td class="nme">David Godbless</td> 
