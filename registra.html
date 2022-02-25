@@ -31,7 +31,7 @@
         <b>Page 2</b>
     </span>
     <!-- page content begins here -->
-    <br/><br/>
+    <br/>
   <div class="modaBox">
       <div class="imageBox">
         Register new patient
@@ -52,7 +52,7 @@
 
     <div class="formBox" >
         
-      <form  action="/action_page.php" method="post">
+      <form id="forms"  action="/action_page.php" method="post">
         <!--form for biodata-->
         <div class="formDiv" id="biodata">
           <span class="formField">
@@ -95,13 +95,13 @@
           <input class="formField" type="password" placeholder="Enter Password" name="psw" required />
           </span>
 
-          <div class="" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">NEXT</button>
-            <button type="button" class="cancelbtn">RESET</button>
+          <div class="formNav" >
+            <button onclick="nxt(biodata)" type="button" class="cancelbtn">NEXT <i class="fas fa-arrow-alt-circle-right"></i></button>
+            <button type="button" class="cancelbtn">RESET <i class="fas fa-redo"></i></button>
           </div>
         </div>
          <!--form for location-->
-         <div class="formDiv" id="location">
+         <div class="formDiv" id="location" style="display: none;">
           
           <label for="uname">Current Address</label>
           <input  type="text" placeholder="Enter Username" name="uname" required />
@@ -120,14 +120,14 @@
           <input class="formField" type="password" placeholder="Enter Password" name="psw" required />
            </span>
 
-          <div class="" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">NEXT</button>
-            <button type="button" class="cancelbtn">PREVIOUS</button>
-            <button type="button" class="cancelbtn">RESET</button>
+           <div class="formNav" >
+            <button onclick="nxt(location)" type="button" class="cancelbtn">NEXT <i class="fas fa-arrow-alt-circle-right"></i></button>
+            <button onclick="prv(location)" type="button" class="cancelbtn">PREVIOUS <i class="fas fa-arrow-alt-circle-left"></i></button>
+            <button type="button" class="cancelbtn">RESET <i class="fas fa-redo"></i></button>
           </div>
         </div>   
         <!--form for insurance-->
-        <div class="formDiv" id="insurance">
+        <div class="formDiv" id="insurance" style="display: none;">
  
           <label for="psw"> Insurance </label>
           <select class="selectBox">
@@ -143,14 +143,14 @@
           <input class="formField" type="password" placeholder="Enter Password" name="psw" required />
            
 
-          <div class="" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">NEXT</button>
-            <button type="button" class="cancelbtn">PREVIOUS</button>
-            <button type="button" class="cancelbtn">RESET</button>
+          <div class="formNav" >
+            <button onclick="nxt(insurance)" type="button" class="cancelbtn">NEXT <i class="fas fa-arrow-alt-circle-right"></i></button>
+            <button onclick="prv(insurance)" type="button" class="cancelbtn">PREVIOUS <i class="fas fa-arrow-alt-circle-left"></i></button>
+            <button type="button" class="cancelbtn">RESET <i class="fas fa-redo"></i></button>
           </div>
         </div>
         <!--form for beliefs and career-->
-        <div class="formDiv" id="beliefs">
+        <div class="formDiv" id="beliefs" style="display: none;">
         
           <label for="uname">Occupation</label>
           <input  type="text" placeholder="Enter Username" name="uname" required />
@@ -158,15 +158,14 @@
           <label for="psw"> Religion </label>
           <input class="formField" type="text" placeholder="Enter Password" name="psw" required />
           
-
-          <div class="" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">NEXT</button>
-            <button type="button" class="cancelbtn">PREVIOUS</button>
-            <button type="button" class="cancelbtn">RESET</button>
+          <div class="formNav" >
+            <button onclick="nxt(beliefs)" type="button" class="cancelbtn">NEXT <i class="fas fa-arrow-alt-circle-right"></i></button>
+            <button onclick="prv(beliefs)" type="button" class="cancelbtn">PREVIOUS <i class="fas fa-arrow-alt-circle-left"></i></button>
+            <button type="button" class="cancelbtn">RESET <i class="fas fa-redo"></i></button>
           </div>
         </div>
         <!--form for guardian-->
-        <div class="formDiv" id="guardian">
+        <div class="formDiv" id="guardian" style="display: none;">
            
           <label for="uname">Guardian Name</label>
           <input  type="text" placeholder="Enter Username" name="uname" required />
@@ -177,23 +176,23 @@
            <label for="psw">Guardian Address </label>
           <input class="formField" type="text" placeholder="Enter Password" name="psw" required />
          
-          <div class="" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">NEXT</button>
-            <button type="button" class="cancelbtn">PREVIOUS</button>
-            <button type="button" class="cancelbtn">RESET</button>
+          <div class="formNav" >
+            <button onclick="nxt(guardian)" type="button" class="cancelbtn">NEXT <i class="fas fa-arrow-alt-circle-right"></i></button>
+            <button onclick="prv(guardian)" type="button" class="cancelbtn">PREVIOUS <i class="fas fa-arrow-alt-circle-left"></i></button>
+            <button type="button" class="cancelbtn">RESET <i class="fas fa-redo"></i></button>
           </div>
         </div>
         <!--form for image-->
-        <div class="formDiv" id="image">
+        <div class="formDiv" id="image" style="display: none;">
           <span class="formField">
           <label for="uname">From</label>
           <input class="selectBox"  type="file" placeholder="Enter Username" name="uname" required />
           </span>
 
-          <div class="" style="background-color:#f1f1f1">
-            <button type="button" class="cancelbtn">SUBMIT</button>
-            <button type="button" class="cancelbtn">PREVIOUS</button>
-            <button type="button" class="cancelbtn">RESET</button>
+          <div class="formNav" >
+            <button onclick="nxt(image)" type="submit" class="cancelbtn">SUBMIT <i class="fas fa-arrow-alt-circle-right"></i></button>
+            <button onclick="prv(image)" type="button" class="cancelbtn">PREVIOUS <i class="fas fa-arrow-alt-circle-left"></i></button>
+            <button type="button" class="cancelbtn">RESET <i class="fas fa-redo"></i></button>
           </div>
         </div>
       </form>

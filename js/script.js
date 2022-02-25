@@ -8,6 +8,7 @@ let wBtm = document.getElementById("webBtm");
 let sidebar = document.getElementById("myNav");
 var i, a;
 let clerics = document.getElementById("clericals");
+let forms = document.getElementById("forms");
   let notice = document.getElementById('noticeMenu');
   let dropMenu = document.getElementById('dropMenu'); 
   let postals = document.getElementById('postals_dropMenu'); 
@@ -20,11 +21,12 @@ window.onclick = function(e) {
     dropMenu.style.visibility = "hidden";
     postals.style.visibility = "hidden";
   }
-}  
+}
+
 let miniTabs = document.getElementsByClassName("miniTabsLinks");
 for (let b = 0; b < miniTabs.length; b++) {
    let clickedBtn = miniTabs[b];
-   clickedBtn.classList.remove("active");
+   clickedBtn.classList.remove("m_active");
    clickedBtn.addEventListener("click", function() {
     let current = document.getElementsByClassName("m_active");
     
@@ -37,7 +39,7 @@ for (let b = 0; b < miniTabs.length; b++) {
     this.className += " m_active";
  });
 }
-
+//code to switch tabs in front office -> clericals
 function switch_tab(t){
  let selectedTab = document.getElementById(t);
 //for each of the chile node of the cleric element set display to none to hide them
@@ -55,6 +57,20 @@ function switch_tab(t){
   //or if any other tab button is selected
   else if(t !== "postals_tab"){
     postals.style.visibility = "hidden";
+  }
+  //set selected node to display attribute to block
+ selectedTab.setAttribute('style', 'display:block');
+}
+//code to switch tabs in admin -> new account
+function switch_form(t){
+ let selectedTab = document.getElementById(t);
+//for each of the child node of the cleric element set display to none to hide them
+  for(let a = 0; a < forms.children.length; a++){
+    //if clicked button doesnot corresponds to the child node 
+    //being displayed, hide the child node, else skip it
+    if(forms.children[a].getAttribute('id') != selectedTab.getAttribute('id')){
+       forms.children[a].style= 'display:none';
+    }
   }
   //set selected node to display attribute to block
  selectedTab.setAttribute('style', 'display:block');
@@ -210,4 +226,62 @@ window.onclick = function(event) {
 //code to show modal popup
 const showModal = (a) => {
   document.getElementById(a).style.display='block';
+}
+
+//set clicked butn to active
+let adminTabs = document.getElementsByClassName("redBoxBtn");
+for (let b = 0; b < adminTabs.length; b++) {
+   let clickedBtn = adminTabs[b];
+   clickedBtn.classList.remove("ad_active");
+   clickedBtn.addEventListener("click", function() {
+    let current = document.getElementsByClassName("ad_active");
+    
+    // If there's no active class
+    if (current.length > 0) {
+      current[0].className = current[0].className.replace(" ad_active", "");
+    }
+
+    // Add the active class to the current/clicked button
+    this.className += " ad_active";
+ });
+}
+//
+function nxt(i){
+  let nxtSib = i.nextElementSibling;
+  i.setAttribute('style', 'animation-name: slideOut'); 
+  i.style.animationDuration = '1s';
+  i.style.position = 'relative';
+  i.style.animationIterationCount = '1';
+  i.style.animationFillMode = 'both';
+  if(i.hasAttribute('style', 'animation-name: slideOut')){
+    setTimeout(()=>{
+    i.setAttribute('style', 'display: none');
+    nxtSib.setAttribute('style', 'display: ');
+    nxtSib.setAttribute('style', 'animation-name: slideIn'); 
+    nxtSib.style.animationDirection = 'reverse';  
+    nxtSib.style.animationDuration = '1s'; 
+    nxtSib.style.position = 'relative';
+    nxtSib.style.animationFillMode = 'both';
+    },1000);
+  };
+}
+
+function prv(i){
+  let prvSib = i.previousElementSibling;
+  i.setAttribute('style', 'animation-name: slideOut'); 
+  i.style.animationDuration = '0.75s';
+  i.style.position = 'relative';
+  i.style.animationIterationCount = '1';
+  i.style.animationFillMode = 'both';
+  if(i.hasAttribute('style', 'animation-name: slideOut')){
+    setTimeout(()=>{
+    i.setAttribute('style', 'display: none');
+    prvSib.setAttribute('style', 'display: ');
+    prvSib.setAttribute('style', 'animation-name: slideIn'); 
+    prvSib.style.animationDirection = 'reverse';  
+    prvSib.style.animationDuration = '0.75s'; 
+    prvSib.style.position = 'relative';
+    prvSib.style.animationFillMode = 'both';
+    },1000);
+  };
 }
