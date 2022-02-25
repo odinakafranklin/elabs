@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/sub_style.css" rel="stylesheet">
+<link href="css/all.css" rel="stylesheet">
+</head>
+<!--body of webpage with a js function on window screen change-->
+<body onresize="">
+<!--topnav begins-->
+<div id="headDiv" class="topnav"></div>
+<!--topnav ends-->
+
+ <!---sidebar begins-->
+ <div id="myNav" class="overlay" ></div>
+ <!--sidebar ends--> 
+ 
+<!--section begins-->
+<div class="section">
+  <div id="webMain" class="main">
+    
+    <span class="mobile_btn" href="#" style="cursor:pointer; margin-left: 1px;" onclick="toggleSideBar()">
+      <i class="fa fa-fw fa-bars "></i>
+    </span>
+    <!--bread crumbs-->
+    <span class="arrow">
+        <a style="color:#ccc;">Home <i class="fa fa-fw fa-arrow-right"></i></a>
+        <a style="color:#ccc;">Page 1 <i class="fa fa-fw fa-arrow-right"></i></a>
+        <b>Page 2</b>
+    </span>
+    <!-- page content begins here -->
+    <br/><br/>
+  <div class="modaBox">
+      <div class="imageBox">
+        Register new patient
+      </div>
+      
+    <div class="redBox">
+       <small>
+        <span class="redBoxBtn" onclick="switch_form('biodata')" > Biodata </span>
+        <span class="redBoxBtn" onclick="switch_form('location')"> Location </span>
+        <span class="redBoxBtn" onclick="switch_form('insurance')"> Insurance </span>
+        <span class="redBoxBtn" onclick="switch_form('beliefs')"> Beliefs & Career</span>
+        <span class="redBoxBtn" onclick="switch_form('guardian')"> Guardian </span>
+        <span class="redBoxBtn" onclick="switch_form('image')">  Image </span>
+       </small> 
+  </div>
+
+    <div class="guideBox">Please fill all neccessary field</div>
+
+    <div class="formBox" >
+        
+      <form  action="/action_page.php" method="post">
+        <!--form for biodata-->
+        <div class="formDiv" id="biodata">
+          <span class="formField">
+          <label for="uname">From</label>
+          <input  type="text" placeholder="Enter Username" name="uname" required />
+          </span>
+
+          <span class="formField">
+          <label for="psw"> To </label>
+          <input class="formField" type="text" placeholder="Enter Password" name="psw" required />
+           </span>
+
+           <span class="formField">
+          <label for="psw"> Address </label>
+          <input class="formField" type="text" placeholder="Enter Password" name="psw" required />
+          </span>
+
+          <span class="formField">
+          <label for="psw"> Date </label>
+          <input class="formField" type="password" placeholder="Enter Password" name="psw" required />
+           </span>
+
+           <span class="formField">
+          <label for="uname">From</label>
+          <input class="formField" type="text" placeholder="Enter Username" name="uname" required />
+          </span>
+
+          <span class="formField">
+          <label for="psw"> To </label>
+          <input class="formField" type="text" placeholder="Enter Password" name="psw" required />
+           </span>
+
+           <span class="formField">
+          <label for="psw"> Address </label>
+          <input class="formField" type="text" placeholder="Enter Password" name="psw" required />
+          </span>
+
+          <span class="formField">
+          <label for="psw"> Date </label>
+          <input class="formField" type="password" placeholder="Enter Password" name="psw" required />
+          </span>
+
+          <div class="" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">NEXT</button>
+            <button type="button" class="cancelbtn">RESET</button>
+          </div>
+        </div>
+         <!--form for location-->
+         <div class="formDiv" id="location">
+          
+          <label for="uname">Current Address</label>
+          <input  type="text" placeholder="Enter Username" name="uname" required />
+          
+
+          <label for="psw"> Permanent Address </label>
+          <input class="formField" type="text" placeholder="Enter Password" name="psw" required />
+          
+          <span class="formField">
+          <label for="psw"> Nationality </label>
+          <input class="formField" type="text" placeholder="Enter Password" name="psw" required />
+          </span>
+
+          <span class="formField">
+          <label for="psw"> State </label>
+          <input class="formField" type="password" placeholder="Enter Password" name="psw" required />
+           </span>
+
+          <div class="" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">NEXT</button>
+            <button type="button" class="cancelbtn">PREVIOUS</button>
+            <button type="button" class="cancelbtn">RESET</button>
+          </div>
+        </div>   
+        <!--form for insurance-->
+        <div class="formDiv" id="insurance">
+ 
+          <label for="psw"> Insurance </label>
+          <select class="selectBox">
+            <option></option>
+          </select>
+
+          <label for="psw"> Address </label>
+          <select class="selectBox">
+            <option></option>
+          </select>
+          
+          <label for="psw"> Insurance ID No. </label>
+          <input class="formField" type="password" placeholder="Enter Password" name="psw" required />
+           
+
+          <div class="" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">NEXT</button>
+            <button type="button" class="cancelbtn">PREVIOUS</button>
+            <button type="button" class="cancelbtn">RESET</button>
+          </div>
+        </div>
+        <!--form for beliefs and career-->
+        <div class="formDiv" id="beliefs">
+        
+          <label for="uname">Occupation</label>
+          <input  type="text" placeholder="Enter Username" name="uname" required />
+          
+          <label for="psw"> Religion </label>
+          <input class="formField" type="text" placeholder="Enter Password" name="psw" required />
+          
+
+          <div class="" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">NEXT</button>
+            <button type="button" class="cancelbtn">PREVIOUS</button>
+            <button type="button" class="cancelbtn">RESET</button>
+          </div>
+        </div>
+        <!--form for guardian-->
+        <div class="formDiv" id="guardian">
+           
+          <label for="uname">Guardian Name</label>
+          <input  type="text" placeholder="Enter Username" name="uname" required />
+           
+           <label for="psw"> Guardian Phone </label>
+          <input class="formField" type="text" placeholder="Enter Password" name="psw" required />
+           
+           <label for="psw">Guardian Address </label>
+          <input class="formField" type="text" placeholder="Enter Password" name="psw" required />
+         
+          <div class="" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">NEXT</button>
+            <button type="button" class="cancelbtn">PREVIOUS</button>
+            <button type="button" class="cancelbtn">RESET</button>
+          </div>
+        </div>
+        <!--form for image-->
+        <div class="formDiv" id="image">
+          <span class="formField">
+          <label for="uname">From</label>
+          <input class="selectBox"  type="file" placeholder="Enter Username" name="uname" required />
+          </span>
+
+          <div class="" style="background-color:#f1f1f1">
+            <button type="button" class="cancelbtn">SUBMIT</button>
+            <button type="button" class="cancelbtn">PREVIOUS</button>
+            <button type="button" class="cancelbtn">RESET</button>
+          </div>
+        </div>
+      </form>
+
+        
+    </div>
+    
+  </div>   
+</div>
+
+<!--footer begins-->
+    <div id="webBtm" class="btmbar"></div>
+<!--footer ends-->
+
+</div>
+ <!--section ends--> 
+   <script type="text/javascript" src="js/parts.js"></script>
+   <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

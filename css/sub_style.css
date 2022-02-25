@@ -4,6 +4,7 @@
         font-size: 11px; 
         margin-top: 1rem; 
         vertical-align: middle;
+        
      }
      .miniTabsLinks {
       margin: 5px 5px auto auto;
@@ -38,7 +39,15 @@ input[type=text], input[type=password] {
     box-sizing: border-box; border-radius: 8px;
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
   }
-  
+  .selectBox{
+    width: 100%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box; border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+  }
   /* Set a style for all buttons */
   button {
     background-color: #04AA6D;
@@ -194,7 +203,7 @@ input[type=text], input[type=password] {
   margin: -2.5rem 5px auto auto;
   color: #f1f1f1;
   padding:3px 1rem;
-  cursor: pointer; width: 150px;
+  cursor: pointer; max-width: 120px;
   text-align: center;
   border-radius: 5px; font-size: 14px;
   background-color: #9C3030;
@@ -209,4 +218,58 @@ input[type=text], input[type=password] {
   font-size: 1rem;
   margin-top: 2rem;
   text-align: right;
+}
+.modaBox{
+  padding: 1rem;
+  
+}
+.imageBox{
+  border: 1px solid #9C3030;
+  width: inherit; padding: 3rem;
+  margin: 5px 0; font-weight: bold;
+  font-size: 18px; text-align: center;
+}
+.redBoxBtn {
+  margin: 5px 5px auto auto;
+  color: #f1f1f1;
+  padding:5px 1rem;
+  cursor: pointer;
+  text-align: center;
+  background: #EAAFAF;
+  border-radius: 5px;
+  border: 1px solid #EAAFAF;
+}
+.redBoxBtn:hover {
+  margin: 5px 5px auto auto;
+  color: #f1f1f1;
+  padding:0.8rem 1rem;
+  cursor: pointer;
+  text-align: center;
+  background: #9C3030;
+  border-radius: 5px;
+  border: 1px solid #9C3030;
+}
+.guideBox{
+  width: 70%; padding: 0.4rem;
+  background-color: #F4D8D8;
+  text-align: center; margin: 0 auto;
+}
+.redBox{
+  width:inherit; padding: 1rem;
+  margin: 5px 0; text-align: center; 
+}
+.formField{
+  width: 48%;
+  display: inline-block;
+  margin: 2px 5px;
+  text-align: left;
+}
+.formBox{
+  margin: 5px auto;
+  text-align: left;
+}
+.formDiv{
+  margin-bottom: 10px;
+  border: 1px solid blue;
+  padding: 20px;
 }

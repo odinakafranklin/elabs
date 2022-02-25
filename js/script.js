@@ -84,8 +84,6 @@ for (i = 0; i < dropdown.length; i++) {
 
 //code to toggle notification dropdown menu
 const dropNotify = () => {
-
-  console.log(notice);
 	if(notice.style.visibility == "hidden"){
     notice.style.visibility = "visible";
 	}else{
