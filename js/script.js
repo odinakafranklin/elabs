@@ -12,7 +12,7 @@ let forms = document.getElementById("forms");
   let notice = document.getElementById('noticeMenu');
   let dropMenu = document.getElementById('dropMenu'); 
   let postals = document.getElementById('postals_dropMenu'); 
-
+let counter = 0;
    // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(e) {
   if (e.target == wMain) {
@@ -232,10 +232,11 @@ const showModal = (a) => {
 let adminTabs = document.getElementsByClassName("redBoxBtn");
 for (let b = 0; b < adminTabs.length; b++) {
    let clickedBtn = adminTabs[b];
+   
    clickedBtn.classList.remove("ad_active");
    clickedBtn.addEventListener("click", function() {
     let current = document.getElementsByClassName("ad_active");
-    
+    counter = b;
     // If there's no active class
     if (current.length > 0) {
       current[0].className = current[0].className.replace(" ad_active", "");
@@ -247,6 +248,7 @@ for (let b = 0; b < adminTabs.length; b++) {
 }
 //
 function nxt(i){
+  counter ++;
   let nxtSib = i.nextElementSibling;
   i.setAttribute('style', 'animation-name: slideOut'); 
   i.style.animationDuration = '1s';
@@ -256,32 +258,45 @@ function nxt(i){
   if(i.hasAttribute('style', 'animation-name: slideOut')){
     setTimeout(()=>{
     i.setAttribute('style', 'display: none');
-    nxtSib.setAttribute('style', 'display: ');
     nxtSib.setAttribute('style', 'animation-name: slideIn'); 
     nxtSib.style.animationDirection = 'reverse';  
-    nxtSib.style.animationDuration = '1s'; 
-    nxtSib.style.position = 'relative';
-    nxtSib.style.animationFillMode = 'both';
-    },1000);
+    nxtSib.style.animationDuration = '1s';
+    for (let b = 0; b < adminTabs.length; b++) {
+      let currentDiv = document.getElementsByClassName("ad_active");
+    
+      // If there's no active class
+      if (currentDiv.length > 0) {
+        currentDiv[0].className = currentDiv[0].className.replace(" ad_active", "");
+      }
+    adminTabs[counter].className += " ad_active";
+    }
+    },500);
   };
 }
 
 function prv(i){
+  counter--;
   let prvSib = i.previousElementSibling;
-  i.setAttribute('style', 'animation-name: slideOut'); 
-  i.style.animationDuration = '0.75s';
+  i.setAttribute('style', 'animation-name: slideIn'); 
+  i.style.animationDuration = '1s';
   i.style.position = 'relative';
   i.style.animationIterationCount = '1';
   i.style.animationFillMode = 'both';
-  if(i.hasAttribute('style', 'animation-name: slideOut')){
+  if(i.hasAttribute('style', 'animation-name: slideIn')){
     setTimeout(()=>{
     i.setAttribute('style', 'display: none');
-    prvSib.setAttribute('style', 'display: ');
-    prvSib.setAttribute('style', 'animation-name: slideIn'); 
+    prvSib.setAttribute('style', 'animation-name: slideOut'); 
     prvSib.style.animationDirection = 'reverse';  
-    prvSib.style.animationDuration = '0.75s'; 
-    prvSib.style.position = 'relative';
-    prvSib.style.animationFillMode = 'both';
-    },1000);
+    prvSib.style.animationDuration = '1s';
+    for (let b = 0; b < adminTabs.length; b++) {
+      let currentDiv = document.getElementsByClassName("ad_active");
+    
+      // If there's no active class
+      if (currentDiv.length > 0) {
+        currentDiv[0].className = currentDiv[0].className.replace(" ad_active", "");
+      }
+    adminTabs[counter].className += " ad_active";
+    }
+    },500);
   };
 }
