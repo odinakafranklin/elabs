@@ -276,10 +276,14 @@ input[type=text], input[type=password] {
 }
 .formBox{
   margin: 5px auto;
-  text-align: left;
+  text-align: center;
+  border: 1px solid magenta;
+  max-width: 75%;
+  padding:  1rem;
 }
+
 .formDiv{
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
   padding: 20px; min-height: 350px;
 }
 @keyframes slideOut{
@@ -307,4 +311,53 @@ input[type=text], input[type=password] {
 }
 .formNav{
   background-color:#f1f1f1;
+}
+.bigIcon{
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+}
+.p_active, .bx1:hover{
+  text-align: center;
+  color: #9C3030;
+  display: inline-block;
+  width: 24%;
+  background: #FFFEFE;
+  border: 2px solid #9C3030;
+  box-sizing: border-box;
+  border-radius: 14px;
+  padding: 1.8rem;
+  margin: 5px; max-width: 170px;
+}
+.bx1{
+  text-align: center;
+  color: #C4C4C4;
+  display: inline-block;
+  width: 24%;
+  background: #FFFEFE;
+  border: 2px solid #C4C4C4;
+  box-sizing: border-box;
+  border-radius: 14px;
+  padding: 1.8rem; max-width: 170px;
+  margin: 5px; text-transform: capitalize;
+}
+.notify1{
+  font-weight:bolder;
+  color:  #fff ;
+  font-size: 8px;
+  margin-left: -11px;
+  color:  #9C3030 ;
+  background-color: #fff;
+  padding: 2px 3px; vertical-align:text-top;
+  border-radius: 25px;
+  border: 1px solid #9C3030;
+}
+.cartIcon{
+  font-size: 2rem;
+  vertical-align: middle;
+  color: #9C3030;
+}
+.btns{
+  width: auto;
+  padding: 5px 10px;
+  background-color: #9C3030;
 }

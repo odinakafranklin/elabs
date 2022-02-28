@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/sub_style.css" rel="stylesheet">
+<link href="css/all.css" rel="stylesheet">
+</head>
+<!--body of webpage with a js function on window screen change-->
+<body onresize="">
+<!--topnav begins-->
+<div id="headDiv" class="topnav"></div>
+<!--topnav ends-->
+<!--section begins-->
+<div class="section">
+  <div id="webMain" class="main">
+    
+    <span class="mobile_btn" href="#" style="cursor:pointer; margin-left: 1px;" onclick="toggleSideBar()">
+      <i class="fa fa-fw fa-bars "></i>
+    </span>
+    <!--bread crumbs-->
+    <span class="arrow">
+        <a style="color:#ccc;">Home <i class="fa fa-fw fa-arrow-right"></i></a>
+        <b>Billings</b>
+    </span>
+    <!-- page content begins here -->
+    <br/>
+  <div class="modaBox">
+  <div>Billing Module</div>
+
+    <div class="formBox" >
+
+    <div style="text-align: right;margin-right: 5rem;">
+      <span style="text-align: left;">Search for Bill</span> <br/>    
+      <input style="max-width: 200px;" type="text" />
+      <button type="submit" class="btns">Search</button>
+      <i class="fa fa-fw fa-shopping-cart cartIcon"></i>
+      <sup class="notify1">10</sup> 
+    </div>
+
+        <span class="bx1 p_active">
+            <i class="fa fa-fw fa-flask bigIcon"></i><br/>
+            pathology bills
+        </span>
+        <span class="bx1">
+            <i class="fa fa-fw fa-x-ray bigIcon"></i><br/>
+            imaging bills
+        </span>
+        <span class="bx1">
+            <i class="fa fa-fw fa-heartbeat bigIcon"></i><br/>
+            cardiology bills
+        </span>        <span class="bx1">
+            <i class="fa fa-fw fa-prescription bigIcon"></i><br/>
+            phamarcy bills
+        </span>        <span class="bx1">
+            <i class="fa fa-fw fa-procedures bigIcon"></i><br/>
+            dialysis bills
+        </span>        <span class="bx1">
+            <i class="fa fa-fw fa-eye bigIcon"></i><br/>
+            optometry bills
+        </span>        <span class="bx1">
+            <i class="fa fa-fw fa-user-md bigIcon"></i><br/>
+            consultation bills
+        </span>        <span class="bx1">
+            <i class="fa fa-fw fa-random bigIcon"></i><br/>
+            other bills
+        </span>
+        
+    </div>
+    
+  </div>   
+</div>
+
+<!--footer begins-->
+    <div id="webBtm" class="btmbar"></div>
+<!--footer ends-->
+
+</div>
+ <!--section ends-->
+ <!---sidebar begins-->
+ <div id="myNav" class="overlay" ></div>
+ <!--sidebar ends--> 
+ 
+ 
+   <script type="text/javascript" src="js/parts.js"></script>
+   <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
