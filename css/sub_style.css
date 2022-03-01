@@ -37,7 +37,7 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box; border-radius: 8px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 14px 3px rgba(0, 0, 0, 0.25);
   }
   .selectBox{
     width: 100%;
@@ -260,7 +260,7 @@ input[type=text], input[type=password] {
   border: 1px solid #9C3030;
 }
 .guideBox{
-  width: 70%; padding: 0.4rem;
+  max-width: 550px; padding: 0.4rem;
   background-color: #F4D8D8;
   text-align: center; margin: 0 auto;
 }
@@ -276,9 +276,9 @@ input[type=text], input[type=password] {
 }
 .formBox{
   margin: 5px auto;
-  text-align: left;
-  max-width: 90%;
-  padding:  1rem;
+  text-align: center;
+  max-width: 680px;
+  padding:  1rem 1.4rem;
 }
 
 .formDiv{
