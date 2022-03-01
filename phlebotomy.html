@@ -32,10 +32,12 @@
     <div class="formBox" >
 
     <div style="text-align: right; margin: auto 6% 1rem auto;">
-       <p class="notify2">Search for Bill </p>   
-        <input style="max-width: 200px;" type="text" />
+        <span class="formField">
+            <label>Search for Bill</label><br/>   
+        <input style="max-width: 75%;" type="text" />
         <button type="submit" style="margin-right: 2rem;" class="btns">Search</button> 
-      <span >
+        </span>
+        <span >
         <i class="fa fa-fw fa-shopping-cart cartIcon"></i>
         <sup class="notify1">10</sup>
       </span> 
@@ -76,6 +78,64 @@
         
     </div>
     
+    <div class="formBox">
+        <div id="visitors_tab" class="basic">
+            <p style="text-align: right">
+                <button class="btns"><i class="fa fa-fw fa-money-bill"></i> Add Bill  </button>
+                <i class="fa fa-fw fa-shopping-cart cartIcon"></i>
+                <sup class="notify1">10</sup>
+             </p>
+
+            <span class="formField">
+                <label>Start Date</label><br/>
+                <input type="date" style="max-width:250px" placeholder="enter name to search" name="search" />
+             
+                <label>End Date</label><br/>
+                <input type="date" style="max-width:250px" placeholder="enter name to search" name="search" />
+            </span>
+            <button type="submit" class="btns">Search</button>
+                <div style="overflow-x:auto;">
+                  <table>
+                    <tr class="thd">
+                        <th class="nme">Patient Name</th> 
+                        <th class="tyms">Bill No.</th> 
+                        <th class="tyms">Date</th> 
+                        <th class="amt">Charge Amount</th> 
+                        <th class="amt">Paid Amount</th> 
+                        <th class="amt">Outstanding Amount</th> 
+                        <th class="amt">Actions</th>
+                    </tr> 
+                    <tr class="tbd">
+                        <td class="nme">Kingsley peters</td> 
+                        <td class="tyms">Path001</td> 
+                        <td class="tyms">22 Feb 2022</td> 
+                        <td class="amt">3000</td> 
+                        <td class="amt">3000</td>
+                        <td class="amt"> - </td> 
+                        <td class="amt actns"  >
+                            <a><i class="fa fa-fw fa-trash"></i></a>
+                            <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                            <a><i class="fa fa-fw fa-search"></i></a>
+                        </td>
+                    </tr>
+                    <tr class="tbd">
+                      <td class="nme">Kingsley peters</td> 
+                      <td class="tyms">Path002</td> 
+                      <td class="tyms">22 Feb 2022</td> 
+                      <td class="amt">4500</td> 
+                      <td class="amt">4000</td>
+                      <td class="amt">500</td> 
+                      <td class="amt actns"  >
+                          <a><i class="fa fa-fw fa-trash"></i></a>
+                          <a><i class="fa fa-fw fa-pencil-alt"></i></a>
+                          <a><i class="fa fa-fw fa-search"></i></a>
+                      </td>
+                    </tr>
+                     
+                  </table>
+                </div>
+          </div>
+    </div>
   </div>   
 </div>
 

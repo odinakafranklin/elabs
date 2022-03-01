@@ -276,7 +276,7 @@ input[type=text], input[type=password] {
 }
 .formBox{
   margin: 5px auto;
-  text-align: center;
+  text-align: left;
   max-width: 90%;
   padding:  1rem;
 }
@@ -312,7 +312,7 @@ input[type=text], input[type=password] {
   background-color:#f1f1f1;
 }
 .bigIcon{
-  font-size: 5rem;
+  font-size: 4rem;
   margin-bottom: 0.5rem;
 }
 .p_active, .bx1:hover{
@@ -323,8 +323,8 @@ input[type=text], input[type=password] {
   border: 2px solid #9C3030;
   box-sizing: border-box;
   border-radius: 14px;
-  padding: 1.8rem;
-  margin: 5px; width: 170px;
+  padding: 1.5rem 0.8rem;
+  margin: 5px; width: 150px;
 }
 .bx1{
   text-align: center;
@@ -334,7 +334,7 @@ input[type=text], input[type=password] {
   border: 2px solid #C4C4C4;
   box-sizing: border-box;
   border-radius: 14px;
-  padding: 1.8rem; width: 170px;
+  padding: 1.5rem 0.8rem; width: 150px;
   margin: 5px; text-transform: capitalize;
 }
 .notify1{
@@ -361,4 +361,13 @@ input[type=text], input[type=password] {
 .notify2{
   margin-right: 18rem;
   margin-bottom: -1px;
+}
+input[type=date]{
+  width: 100%;
+    padding: 8px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box; border-radius: 8px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
 }
